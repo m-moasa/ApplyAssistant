@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-times-new-roman: "Times New Roman";
+
+  /* font sizes */
+  --font-size-5xl: 24px;
+  --font-size-base: 16px;
+  --font-size-xl: 20px;
+  --font-size-21xl: 40px;
+  --font-size-29xl: 48px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-mediumblue-100: #0009d6;
+  --color-yellow: rgba(255, 247, 56, 0.6);
+
+  /* Gaps */
+  --gap-smi: 13px;
+
+  /* Paddings */
+  --padding-xs: 12px;
+  --padding-6xs: 7px;
+  --padding-68xl: 87px;
+
+  /* border radiuses */
+  --br-3xs: 10px;
+}

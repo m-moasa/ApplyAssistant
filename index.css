@@ -1,0 +1,368 @@
+@keyframes shadow-drop-bottom {
+  0% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  to {
+    box-shadow: 0 12px 20px -12px rgb(0 0 0/35%);
+  }
+}
+.aa-icon {
+  position: relative;
+  width: 184px;
+  height: 114px;
+  flex-shrink: 0;
+}
+.apply-assistant {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  -webkit-text-stroke: 0.3px #fff;
+}
+.aa-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 9px;
+}
+.where-your-find-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 432px;
+  -webkit-text-stroke: 0.1px #fff;
+}
+.frame-child {
+  position: absolute;
+  top: 30.5px;
+  left: 262px;
+  width: 163px;
+  height: 1px;
+}
+.where-your-find-your-next-acad-parent {
+  position: relative;
+  width: 432px;
+  height: 31px;
+  flex-shrink: 0;
+}
+.frame-group,
+.frame-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.frame-wrapper {
+  align-items: flex-end;
+  font-size: var(--font-size-5xl);
+}
+.frame-group {
+  align-items: center;
+  gap: 8px;
+}
+.frame-item {
+  position: relative;
+  border-top: 0.5px dashed var(--color-black);
+  box-sizing: border-box;
+  width: 1422.5px;
+  height: 0.5px;
+  flex-shrink: 0;
+}
+.frame-inner {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  background-color: var(--color-yellow);
+  width: 342px;
+  height: 9px;
+}
+.define-a-project {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 6px;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  -webkit-text-stroke: 0.3px #fff;
+}
+.rectangle-parent {
+  position: relative;
+  width: 342px;
+  height: 55px;
+  flex-shrink: 0;
+  z-index: 0;
+}
+.define-a-project1,
+.frame-container {
+  font-family: var(--font-times-new-roman);
+}
+.frame-container {
+  height: 55px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  font-size: var(--font-size-29xl);
+  color: var(--color-black);
+}
+.define-a-project1 {
+  position: relative;
+  font-size: var(--font-size-5xl);
+  color: #000697;
+  text-align: left;
+}
+.define-a-project-wrapper {
+  cursor: pointer;
+  border: 1px solid var(--color-mediumblue-100);
+  padding: 8px 314px;
+  background-color: transparent;
+  border-radius: var(--br-3xs);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.define-a-project-wrapper:hover {
+  animation: 1s ease 0s 1 normal both shadow-drop-bottom;
+  opacity: 1;
+}
+.define-a-project-wrapper:active {
+  background-color: rgba(0, 8, 213, 0.2);
+}
+.line-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 33px;
+}
+.active-projects {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 16px;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  -webkit-text-stroke: 0.3px #fff;
+}
+.group-wrapper {
+  height: 55px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.project {
+  margin: 0;
+}
+.project-name {
+  position: relative;
+  font-size: var(--font-size-21xl);
+  -webkit-text-stroke: 0.3px #fff;
+}
+.faculty-name {
+  position: relative;
+  -webkit-text-stroke: 0.2px #fff;
+}
+.detaildetaildetaildetaildetail {
+  position: relative;
+  font-size: var(--font-size-base);
+  display: inline-block;
+  width: 198px;
+  -webkit-text-stroke: 0.1px #fff;
+}
+.project-name-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-smi);
+}
+.apply {
+  position: relative;
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-times-new-roman);
+  color: var(--color-white);
+  text-align: left;
+}
+.apply-wrapper {
+  cursor: pointer;
+  border: 1px solid var(--color-mediumblue-100);
+  padding: var(--padding-6xs) var(--padding-68xl);
+  background-color: var(--color-mediumblue-100);
+  border-radius: var(--br-3xs);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.detaildetaildetaildetaildetail5,
+.faculty-name1,
+.frame-section,
+.project-name1 {
+  font-family: var(--font-times-new-roman);
+  color: var(--color-black);
+  text-align: left;
+}
+.frame-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 5px 1px rgba(105, 105, 105, 0.25);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  height: 396px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-xs) var(--padding-6xs);
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-size-xl);
+}
+.detaildetaildetaildetaildetail5,
+.faculty-name1,
+.project-name1 {
+  position: relative;
+  font-size: var(--font-size-21xl);
+  -webkit-text-stroke: 0.3px #fff;
+}
+.detaildetaildetaildetaildetail5,
+.faculty-name1 {
+  font-size: var(--font-size-xl);
+  -webkit-text-stroke: 0.2px #fff;
+}
+.detaildetaildetaildetaildetail5 {
+  font-size: var(--font-size-base);
+  display: inline-block;
+  width: 198px;
+  -webkit-text-stroke: 0.1px #fff;
+}
+.frame-form {
+  position: absolute;
+  top: 420px;
+  left: 5px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 5px 1px rgba(105, 105, 105, 0.25);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  height: 396px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-xs) var(--padding-6xs);
+  align-items: center;
+  justify-content: space-between;
+}
+.detaildetaildetaildetaildetail10 {
+  margin: 0;
+  position: relative;
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+  width: 198px;
+  -webkit-text-stroke: 0.1px #fff;
+}
+.frame-parent2 {
+  position: absolute;
+  top: 0;
+  left: 275px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 5px 1px rgba(105, 105, 105, 0.25);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  height: 396px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-xs) var(--padding-6xs);
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: var(--font-times-new-roman);
+}
+.frame-parent3 {
+  top: 420px;
+  left: 280px;
+}
+.frame-parent3,
+.frame-parent4,
+.frame-parent5 {
+  position: absolute;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 5px 1px rgba(105, 105, 105, 0.25);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  height: 396px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-xs) var(--padding-6xs);
+  align-items: center;
+  justify-content: space-between;
+}
+.frame-parent4 {
+  top: 0;
+  left: 550px;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: var(--font-times-new-roman);
+}
+.frame-parent5 {
+  top: 420px;
+  left: 555px;
+}
+.frame-parent1 {
+  position: relative;
+  width: 806px;
+  height: 816px;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--font-size-xl);
+}
+.frame-div,
+.frame-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.frame-div {
+  gap: 24px;
+  font-size: var(--font-size-29xl);
+}
+.frame-parent {
+  position: absolute;
+  top: 85px;
+  left: -73px;
+  gap: 48px;
+}
+.search-result-page {
+  position: relative;
+  background-color: #fcfcfc;
+  width: 100%;
+  height: 1395px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-21xl);
+  color: var(--color-black);
+  font-family: var(--font-times-new-roman);
+}
