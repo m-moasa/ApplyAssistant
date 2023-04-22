@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  --font-times-new-roman: "Times New Roman";
+  --font-size-5xl: 24px;
+  --font-size-base: 16px;
+  --font-size-xl: 20px;
+  --font-size-21xl: 40px;
+  --font-size-29xl: 48px;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-darkBlue: #1a2634;
+  --color-mediumblue-100: #203e5f;
+  --color-yellow: #fc0;
+  --color-Beige: #fee5b1;
+  --gap-smi: 13px;
+  --padding-xs: 12px;
+  --padding-6xs: 7px;
+  --padding-68xl: 87px;
+  --br-3xs: 10px;
+}
+
+/*# sourceMappingURL=index.689f5f05.css.map */
