@@ -14,14 +14,11 @@ body {
   --font-size-21xl: 40px;
   --font-size-29xl: 48px;
 
-  /* Colors */ 
-  /* Theme color : https://colorhunt.co/palette/1a2634203e5fffcc00fee5b1 */
+  /* Colors */
   --color-white: #fff;
   --color-black: #000;
-  --color-darkBlue: #1A2634;
-  --color-mediumblue-100: #203E5F;
-  --color-yellow:#FFCC00;
-  --color-Beige: #FEE5B1;
+  --color-mediumblue-100: #0009d6;
+  --color-yellow: rgba(255, 247, 56, 0.6);
 
   /* Gaps */
   --gap-smi: 13px;
