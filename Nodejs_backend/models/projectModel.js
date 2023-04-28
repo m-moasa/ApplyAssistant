@@ -1,16 +1,28 @@
 const mongoose = require("mongoose");
 const projectSchema = mongoose.Schema({
-    projName: {
+    name: {
         type: String,
         required : [true, "Please add the project name"]
     },
-    profName: {
+    faculty: {
         type: String,
         required : [true, "Please add the professor name"]
     },
-    email: {
+    university: {
         type: String,
-        required : [true, "Please add the professor email address"]
+        required : [true, "Please add university name"]
+    },
+    deadline: {
+        type: String,
+        required : [true, "Please add the deadline"]
+    },
+    fields: {
+        type: String,
+        required : [true, "Please add the fileds"]
+    },
+    detail: {
+        type: String,
+        required : [false]
     }
 }, {
     timestamp: true

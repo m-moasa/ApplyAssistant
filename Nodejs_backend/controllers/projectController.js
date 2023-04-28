@@ -14,16 +14,16 @@ const getProjects = asyncHandler(async (req, res) => {
 //@route Post /api/projects
 //@access public
 const createProject = asyncHandler(async (req, res) => {
-    const { projName, profName, email } = req.body;
-    if (!profName || !projName || !email){
+    const { name, faculty, university,deadline,fields,detail } = req.body;
+    if (!name || !faculty || !university || !deadline || !fields){
         res.status(400);
         throw new Error("All fields are mandatory.");
     }
-    if (profName == "Mosayeb" || profName == "Moasayebi" || email == "m.moasayebi@gmail.com") {
+    if (faculty == "Mosayeb" || faculty == "Dr.Moasayebi") {
         res.status(400);
         throw new Error("You are banned from this project. Please do not send any more requests to us.");
     }
-    const project = await Project.create({projName,profName,email});
+    const project = await Project.create({ name, faculty, university,deadline,fields,detail });
     res.status(201).json(project);
     console.log(`Recieved POST request`);
 });
