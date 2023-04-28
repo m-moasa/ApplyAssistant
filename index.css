@@ -387,4 +387,9 @@
   color: var(--color-black);
   font-family: var(--font-times-new-roman);
 }
+.dd{
+  font: optional;
+}
+
+
 
