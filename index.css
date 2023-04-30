@@ -6,6 +6,10 @@
     box-shadow: 0 12px 20px -12px rgb(0 0 0/35%);
   }
 }
+.container {
+  width:65%;  
+  margin: 0 auto;
+}
 .aa-icon {
   position: relative;
   width: 184px;
@@ -204,19 +208,35 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+
 }
 .detaildetaildetaildetaildetail5,
 .faculty-name1,
-.frame-section,
 .project-name1 {
   font-family: var(--font-times-new-roman);
   color: var(--color-black);
   text-align: left;
 }
+ 
+#prolist {
+  height: 660px;
+  width: 1050px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-gap: 20px;
+  overflow-y: scroll;
+
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
+}
 .frame-section {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: flex;
+  margin-bottom: 20px;
+  padding: 10px;
   border-radius: var(--br-3xs);
   background-color: var(--color-white);
   box-shadow: 0 4px 5px 1px rgba(105, 105, 105, 0.25);
@@ -231,6 +251,7 @@
   justify-content: space-between;
   font-size: var(--font-size-xl);
 }
+
 .detaildetaildetaildetaildetail5,
 .faculty-name1,
 .project-name1 {
