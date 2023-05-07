@@ -2,20 +2,24 @@
   0% {
     box-shadow: 0 0 0 0 transparent;
   }
+
   to {
     box-shadow: 0 12px 20px -12px rgb(0 0 0/35%);
   }
 }
+
 .container {
-  width:65%;  
+  width: 65%;
   margin: 0 auto;
 }
+
 .aa-icon {
   position: relative;
   width: 184px;
   height: 114px;
   flex-shrink: 0;
 }
+
 .apply-assistant {
   margin: 0;
   position: relative;
@@ -24,6 +28,7 @@
   font-family: inherit;
   -webkit-text-stroke: 0.3px #fff;
 }
+
 .aa-parent {
   display: flex;
   flex-direction: column;
@@ -31,7 +36,8 @@
   justify-content: flex-start;
   gap: 9px;
 }
-.where-your-find-container {
+
+.where-you-find-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -39,6 +45,7 @@
   width: 432px;
   -webkit-text-stroke: 0.1px #fff;
 }
+
 .frame-child {
   position: absolute;
   top: 30.5px;
@@ -46,26 +53,31 @@
   width: 163px;
   height: 1px;
 }
-.where-your-find-your-next-acad-parent {
+
+.where-you-find-your-next-acad-parent {
   position: relative;
   width: 432px;
   height: 31px;
   flex-shrink: 0;
 }
+
 .frame-group,
 .frame-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .frame-wrapper {
   align-items: flex-end;
   font-size: var(--font-size-5xl);
 }
+
 .frame-group {
   align-items: center;
   gap: 8px;
 }
+
 .frame-item {
   position: relative;
   border-top: 0.5px dashed var(--color-black);
@@ -74,6 +86,7 @@
   height: 0.5px;
   flex-shrink: 0;
 }
+
 .frame-inner {
   position: absolute;
   top: 46px;
@@ -82,6 +95,7 @@
   width: 342px;
   height: 9px;
 }
+
 .define-a-project {
   margin: 0;
   position: absolute;
@@ -92,6 +106,7 @@
   font-family: inherit;
   -webkit-text-stroke: 0.3px #fff;
 }
+
 .rectangle-parent {
   position: relative;
   width: 342px;
@@ -99,10 +114,12 @@
   flex-shrink: 0;
   z-index: 0;
 }
+
 .define-a-project1,
 .frame-container {
   font-family: var(--font-times-new-roman);
 }
+
 .frame-container {
   height: 55px;
   flex-shrink: 0;
@@ -114,12 +131,14 @@
   font-size: var(--font-size-29xl);
   color: var(--color-black);
 }
+
 .define-a-project1 {
   position: relative;
   font-size: var(--font-size-5xl);
   color: #000697;
   text-align: left;
 }
+
 .define-a-project-wrapper {
   cursor: pointer;
   border: 1px solid var(--color-mediumblue-100);
@@ -132,13 +151,16 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .define-a-project-wrapper:hover {
   animation: 1s ease 0s 1 normal both shadow-drop-bottom;
   opacity: 1;
 }
+
 .define-a-project-wrapper:active {
   background-color: rgba(0, 8, 213, 0.2);
 }
+
 .line-parent {
   display: flex;
   flex-direction: column;
@@ -146,6 +168,7 @@
   justify-content: flex-start;
   gap: 33px;
 }
+
 .active-projects {
   margin: 0;
   position: absolute;
@@ -156,6 +179,7 @@
   font-family: inherit;
   -webkit-text-stroke: 0.3px #fff;
 }
+
 .group-wrapper {
   height: 55px;
   flex-shrink: 0;
@@ -164,18 +188,22 @@
   align-items: center;
   justify-content: flex-start;
 }
+
 .project {
   margin: 0;
 }
+
 .project-name {
   position: relative;
   font-size: var(--font-size-21xl);
   -webkit-text-stroke: 0.3px #fff;
 }
+
 .faculty-name {
   position: relative;
   -webkit-text-stroke: 0.2px #fff;
 }
+
 .detaildetaildetaildetaildetail {
   position: relative;
   font-size: var(--font-size-base);
@@ -183,6 +211,7 @@
   width: 198px;
   -webkit-text-stroke: 0.1px #fff;
 }
+
 .project-name-parent {
   display: flex;
   flex-direction: column;
@@ -190,6 +219,7 @@
   justify-content: flex-start;
   gap: var(--gap-smi);
 }
+
 .apply {
   position: relative;
   font-size: var(--font-size-5xl);
@@ -197,6 +227,7 @@
   color: var(--color-white);
   text-align: left;
 }
+
 .apply-wrapper {
   cursor: pointer;
   border: 1px solid var(--color-mediumblue-100);
@@ -210,6 +241,7 @@
   justify-content: flex-start;
 
 }
+
 .detaildetaildetaildetaildetail5,
 .faculty-name1,
 .project-name1 {
@@ -217,12 +249,12 @@
   color: var(--color-black);
   text-align: left;
 }
- 
+
 #prolist {
   height: 660px;
   width: 1050px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   overflow-y: scroll;
 
@@ -233,6 +265,7 @@
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 1rem;
 }
+
 .frame-section {
   display: flex;
   margin-bottom: 20px;
@@ -259,17 +292,20 @@
   font-size: var(--font-size-21xl);
   -webkit-text-stroke: 0.3px #fff;
 }
+
 .detaildetaildetaildetaildetail5,
 .faculty-name1 {
   font-size: var(--font-size-xl);
   -webkit-text-stroke: 0.2px #fff;
 }
+
 .detaildetaildetaildetaildetail5 {
   font-size: var(--font-size-base);
   display: inline-block;
   width: 198px;
   -webkit-text-stroke: 0.1px #fff;
 }
+
 .frame-form {
   position: absolute;
   top: 420px;
@@ -287,6 +323,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .detaildetaildetaildetaildetail10 {
   margin: 0;
   position: relative;
@@ -297,6 +334,7 @@
   width: 198px;
   -webkit-text-stroke: 0.1px #fff;
 }
+
 .frame-parent2 {
   position: absolute;
   top: 0;
@@ -318,10 +356,12 @@
   color: var(--color-black);
   font-family: var(--font-times-new-roman);
 }
+
 .frame-parent3 {
   top: 420px;
   left: 280px;
 }
+
 .frame-parent3,
 .frame-parent4,
 .frame-parent5 {
@@ -339,6 +379,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .frame-parent4 {
   top: 0;
   left: 550px;
@@ -347,10 +388,12 @@
   color: var(--color-black);
   font-family: var(--font-times-new-roman);
 }
+
 .frame-parent5 {
   top: 420px;
   left: 555px;
 }
+
 .frame-parent1 {
   position: relative;
   width: 806px;
@@ -359,6 +402,7 @@
   text-align: left;
   font-size: var(--font-size-xl);
 }
+
 .frame-div,
 .frame-parent {
   display: flex;
@@ -366,16 +410,19 @@
   align-items: center;
   justify-content: flex-start;
 }
+
 .frame-div {
   gap: 24px;
   font-size: var(--font-size-29xl);
 }
+
 .frame-parent {
   position: absolute;
   top: 85px;
   left: -73px;
   gap: 48px;
 }
+
 .search-result-page {
   position: relative;
   background-color: #fcfcfc;
@@ -387,7 +434,3 @@
   color: var(--color-black);
   font-family: var(--font-times-new-roman);
 }
-
-
-
-
