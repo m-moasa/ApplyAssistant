@@ -37,7 +37,7 @@
   display: flex;
 }
 
-.where-your-find-container {
+.where-you-find-container {
   width: 432px;
   -webkit-text-stroke: .1px #fff;
   display: inline-block;
@@ -54,7 +54,7 @@
   left: 262px;
 }
 
-.where-your-find-your-next-acad-parent {
+.where-you-find-your-next-acad-parent {
   width: 432px;
   height: 31px;
   flex-shrink: 0;
