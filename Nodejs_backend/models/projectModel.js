@@ -23,6 +23,10 @@ const projectSchema = mongoose.Schema({
     detail: {
         type: String,
         required : [false]
+    },
+    email: {
+        type: String,
+        required : [true, "Please add your email address"]
     }
 }, {
     timestamp: true

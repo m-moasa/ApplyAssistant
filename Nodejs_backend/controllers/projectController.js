@@ -14,8 +14,8 @@ const getProjects = asyncHandler(async (req, res) => {
 //@route Post /api/projects
 //@access public
 const createProject = asyncHandler(async (req, res) => {
-    const { name, faculty, university,deadline,fields,detail } = req.body;
-    if (!name || !faculty || !university || !deadline || !fields){
+    const { name, faculty, university,deadline,fields,detail ,email} = req.body;
+    if (!name || !faculty || !university || !deadline || !fields || !email){
         res.status(400);
         throw new Error("All fields are mandatory.");
     }
@@ -23,7 +23,7 @@ const createProject = asyncHandler(async (req, res) => {
         res.status(400);
         throw new Error("You are banned from this project. Please do not send any more requests to us.");
     }
-    const project = await Project.create({ name, faculty, university,deadline,fields,detail });
+    const project = await Project.create({ name, faculty, university,deadline,fields,detail,email });
     res.status(201).json(project);
     console.log(`Recieved POST request`);
 });
