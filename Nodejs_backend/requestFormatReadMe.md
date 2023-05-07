@@ -11,7 +11,8 @@
     "university": "University of origin",
     "deadline" : "deadline of project",
     "fields" : "fields of the project, as a string. for example: Bio, AI, NLP",
-    "detail" : "Any more detail on the project"
+    "detail" : "Any more detail on the project",
+    "email" : "Contact email address of professor"
 }
 
 DELETE: send an empty request to http://localhost:5001/api/projects/:id , where id is the id of the project you want to delete

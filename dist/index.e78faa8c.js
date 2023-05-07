@@ -71,7 +71,7 @@ class proObject {
             projectNameParent.appendChild(detailDiv);
             const applyButton = document.createElement("BUTTON");
             applyButton.addEventListener("click", function() {
-                var email1 = proObject.email;
+                var email1 = project.email;
                 var subject1 = "Request for information on project " + project.name;
                 var emailBody = "Dear " + project.faculty + ",\n\nI am interested in learning more about your " + project.name + " project. Can you please provide additional information about the project and the application process?\n\nThank you,\n[Your Name]";
                 var url = "https://mail.google.com/mail/?view=cm&to=" + email1 + "&su=" + encodeURIComponent(subject1) + "&body=" + encodeURIComponent(emailBody);
