@@ -8,30 +8,6 @@ const position = {
   fields:"fields",
   detail:"detail" 
 }
-function performSignIn() {
-
-  let headers = new Headers();
-
-  headers.append('Content-Type', 'application/json');
-  headers.append('Accept', 'application/json');
-
-  headers.append('Access-Control-Allow-Origin', "http://localhost:5001/api/projects/");
-  headers.append('Access-Control-Allow-Credentials', 'true');
-
-  headers.append('GET', 'POST', 'OPTIONS');
-
-  headers.append('Authorization', 'Basic ' + base64.encode(username + ":" + password));
-
-  fetch(sign_in, {
-      //mode: 'no-cors',
-      credentials: 'include',
-      method: 'POST',
-      headers: headers
-    })
-    .then(response => response.json())
-    .then(json => console.log(json))
-    .catch(error => console.log('Authorization failed : ' + error.message));
-}
 
 class proObject {
 static projectList1=[];
