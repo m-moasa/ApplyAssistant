@@ -128,7 +128,9 @@ updateProject() {
  
       this.projectList.appendChild(section);
 
-      sendRequest(URL, 'GET', this.projectList)
+      const jsonString = JSON.stringify(this.projectList);
+
+      sendRequest(URL, 'GET',jsonString)
           .then(response => {
             console.log(response);
           })
