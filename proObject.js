@@ -1,4 +1,16 @@
+const axios = require('axios');
 
+function sendRequest(url, method, data) {
+  return new Promise((resolve, reject) => {
+    axios({ url, method, data })
+      .then(response => {
+        resolve(response.data);
+      })
+      .catch(error => {
+        reject(error);
+      });
+  });
+}
 const position = {
   name:"projectName",
   email:"example@gmail.com",
@@ -8,7 +20,7 @@ const position = {
   fields:"fields",
   detail:"detail" 
 }
-
+const URL = "address_to_back"
 class proObject {
 static projectList1=[];
 constructor(projectList) {
@@ -115,8 +127,18 @@ updateProject() {
       section.appendChild(applyButton);
  
       this.projectList.appendChild(section);
-    });
-  }
+
+      const jsonString = JSON.stringify(this.projectList);
+
+      sendRequest(URL, 'GET',jsonString)
+          .then(response => {
+            console.log(response);
+          })
+          .catch(error => {
+            console.error(error);
+          });
+            });
+          }
 
 remove(index){
     proObject.projectList1.splice(index,1);
