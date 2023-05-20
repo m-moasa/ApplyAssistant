@@ -5,9 +5,27 @@ const Project = require("../models/projectModel");
 //@route Get /api/projects
 //@access public
 const getProjects = asyncHandler(async (req, res) => {
-    const projects = await Project.find();
-    res.status(200).json(projects);
-    console.log(`Recieved GET request`);
+    // const projects = await Project.find();
+    // res.status(200).json(projects);
+    // console.log(`Recieved GET request`);
+});
+
+//@desc Get all projects
+//@route Get /api/projects
+//@access public
+const getProjectsByField = asyncHandler(async (req, res) => {
+    const {reqFeilds} = req.body;
+    if (!reqFeilds){
+        const projects = await Project.find();
+        res.status(200).json(projects);
+        console.log(`Recieved GET request`);
+    }
+    else {
+
+        const projects = await Project.find({fields:reqFeilds});
+        res.status(200).json(projects);
+        console.log(`Recieved GET request`);
+    }
 });
 
 //@desc Add a project
@@ -51,4 +69,4 @@ const deleteProject = asyncHandler(async (req, res) => {
 });
 
 
-module.exports = { getProjects, createProject, updateProject, deleteProject };
+module.exports = { getProjects,getProjectsByField, createProject, updateProject, deleteProject };
