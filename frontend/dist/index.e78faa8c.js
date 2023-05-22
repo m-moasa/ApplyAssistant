@@ -7,7 +7,6 @@ const position = {
     fields: "fields",
     detail: "detail"
 };
-const URL = "address_to_back";
 class proObject {
     static projectList1 = [];
     constructor(projectList){
@@ -36,13 +35,13 @@ class proObject {
             projectNameParent.classList.add("project-name-parent");
             const projectName = document.createElement("B");
             projectName.classList.add("project-name");
-            const projectNameLine1 = document.createElement("P");
-            projectNameLine1.classList.add("project");
-            projectNameLine1.textContent = "Project";
+            // const projectNameLine1 = document.createElement("P");
+            // projectNameLine1.classList.add("project");
+            // projectNameLine1.textContent = "Project";
             const projectNameLine2 = document.createElement("P");
             projectNameLine2.classList.add("project");
             projectNameLine2.textContent = project.name;
-            projectName.appendChild(projectNameLine1);
+            // projectName.appendChild(projectNameLine1);
             projectName.appendChild(projectNameLine2);
             const facultyName = document.createElement("DIV");
             facultyName.classList.add("faculty-name");
