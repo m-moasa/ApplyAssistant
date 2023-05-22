@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 5940
 85/home/ubuntu/term6/Tahlil/may19/resample/ApplyAssistant.github.io/frontend/global.css1684702110214768750 0
 90/home/ubuntu/term6/Tahlil/may19/resample/ApplyAssistant.github.io/frontend/public/Logo.svg1684690094666713354 0
@@ -5939,3 +5940,7 @@
 133/home/ubuntu/term6/Tahlil/may19/resample/ApplyAssistant.github.io/frontend/node_modules/@parcel/watcher/src/windows/WindowsBackend.hh1684690094450675889 0
 137/home/ubuntu/term6/Tahlil/may19/resample/ApplyAssistant.github.io/frontend/node_modules/@parcel/hash/parcel-hash.linux-arm-gnueabihf.node1684690093814565568 0
 123/home/ubuntu/term6/Tahlil/may19/resample/ApplyAssistant.github.io/frontend/node_modules/@parcel/watcher/prebuilds/linux-x641684690094446675196 1
+=======
+67415357
+1684740513991351000
+>>>>>>> e4a6cae89b82033b439479176da928a9252524d9

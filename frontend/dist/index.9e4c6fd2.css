@@ -275,7 +275,7 @@
   left: 0;
 }
 
-.deadline, .faculty-name, .fields, .project-name, .university-name {
+.deadline, .faculty-name, .fields, .university-name {
   -webkit-text-stroke: .3px #fff;
   flex-shrink: 0;
   margin: 0;
@@ -286,8 +286,8 @@
 
 .project-name {
   font-size: var(--font-size-21xl);
-  width: 240px;
-  height: 52.92px;
+  width: 340px;
+  padding-bottom: 30px;
   font-weight: 700;
 }
 
@@ -311,7 +311,8 @@
 }
 
 .project-name-parent {
-  width: 333px;
+  width: 333 px;
+  height: 150 px;
   padding: var(--padding-3xs) 0 0;
   box-sizing: border-box;
   justify-content: flex-start;
@@ -427,7 +428,7 @@
 
 .academic-project {
   font-style: italic;
-  left: 686px;
+  left: 683px;
 }
 
 .aa {
@@ -509,6 +510,7 @@
 .define-a-project-wrapper {
   cursor: pointer;
   border: 1px solid var(--color-mediumblue);
+  height: 390 px;
   border-radius: var(--br-3xs);
   background-color: #0000;
   flex-direction: row;
@@ -681,11 +683,10 @@
 }
 
 #prolist {
-  height: 660px;
+  height: 700px;
   width: 1850px;
   grid-gap: 10px;
   width: 925px;
-  height: 350.77px;
   grid-template-columns: repeat(2, 1fr);
   display: grid;
   position: absolute;
@@ -705,7 +706,7 @@
   background-color: var(--color-white);
   border: 1px solid var(--color-black);
   box-sizing: border-box;
-  height: 396px;
+  height: 400px;
   width: 390px;
   padding: 10px;
   padding: var(--padding-xs) var(--padding-6xs);
@@ -737,15 +738,7 @@
   box-shadow: 0 4px 5px 1px #69696940;
 }
 
-.project-name-parent {
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: var(--gap-smi);
-  flex-direction: column;
-  display: flex;
-}
-
-.detaildetaildetaildetaildetail5, .faculty-name1, .project-name {
+.detaildetaildetaildetaildetail5, .faculty-name1 {
   font-size: var(--font-size-21xl);
   -webkit-text-stroke: .3px #fff;
   position: relative;
@@ -755,14 +748,9 @@
   margin: 0;
 }
 
-.project-name {
-  font-size: var(--font-size-21xl);
-  -webkit-text-stroke: .3px #fff;
-  position: relative;
-}
-
 .faculty-name {
   -webkit-text-stroke: .2px #fff;
+  width: 300px;
   position: relative;
 }
 
@@ -782,7 +770,7 @@
 .apply {
   font-size: var(--font-size-5xl);
   font-family: var(--font-times-new-roman);
-  color: var(--color-black);
+  color: var(--color-white);
   text-align: left;
   position: relative;
 }
@@ -792,7 +780,7 @@
   background-color: var(--color-white);
   border: 1px solid var(--color-black);
   box-sizing: border-box;
-  height: 396px;
+  height: 500px;
   padding: 10px;
   padding: var(--padding-xs) var(--padding-6xs);
   font-size: var(--font-size-xl);
