@@ -81,15 +81,17 @@
       <ul id="prolist">
       </ul>
 
- 
+
       <script type="text/javascript">
-        const universityFilter={ CMU: "false", Sharif: "false", MIT: "false", WU: "false", Stanford: "false", Penn: "false"};
-        const fieldFilter={AI: "false", SoftwareEngineering: "false", ML: "false", algorithms: "false", networks: "false" ,Bioinformatics:"false"};
+        // const universityFilter={ CMU: "false", Sharif: "false", MIT: "false", WU: "false", Stanford: "false", Penn: "false"};
+        const universityFilter = [];
+        // const fieldFilter = { AI: "false", SoftwareEngineering: "false", ML: "false", algorithms: "false", networks: "false", Bioinformatics: "false" };
+        const fieldFilter = [];
         const projectList = document.getElementById("prolist");
-        const projectObject = new proObject(projectList,fieldFilter,universityFilter);
+        const projectObject = new proObject(projectList, fieldFilter, universityFilter);
         window.projectObject = projectObject;
         projectObject.createProjectList();
-        
+
       </script>
 
       <h2 class="apply-assistant">Apply Assistant</h2>
@@ -128,32 +130,39 @@
                 </div>
                 <div class="frame-parent3">
                   <div class="rectangle-container">
-                    <input class="frame-item" type="checkbox"  onchange ="window.projectObject.AI()" id="AICheckbox"/>
+                    <input class="frame-item" type="checkbox" onchange="window.projectObject.updateFieldFilter('AI')"
+                      id="AI" />
 
                     <h3 class="ai">AI</h3>
                   </div>
                   <div class="rectangle-container">
-                    <input class="frame-inner" type="checkbox" onchange="window.projectObject.SoftwareEngineering()" id="SoftwareEngineeringCheckbox"/>
+                    <input class="frame-inner" type="checkbox"
+                      onchange="window.projectObject.updateFieldFilter('SoftwareEngineering')"
+                      id="SoftwareEngineering" />
 
                     <h3 class="ai">Software engineering</h3>
                   </div>
                   <div class="rectangle-container">
-                    <input class="frame-inner" type="checkbox" onchange="window.projectObject.ML()" id="MLCheckbox"/>
+                    <input class="frame-inner" type="checkbox" onchange="window.projectObject.updateFieldFilter('ML')"
+                      id="ML" />
 
                     <h3 class="ai">ML</h3>
                   </div>
                   <div class="rectangle-container">
-                    <input class="frame-inner" type="checkbox" onchange="window.projectObject.networks()" id="networksCheckbox"/>
+                    <input class="frame-inner" type="checkbox"
+                      onchange="window.projectObject.updateFieldFilter('networks')" id="networks" />
 
                     <h3 class="ai">Networks</h3>
                   </div>
                   <div class="rectangle-container">
-                    <input class="frame-inner" type="checkbox" onchange="window.projectObject.algorithms()" id="algorithmsCheckbox"/>
+                    <input class="frame-inner" type="checkbox"
+                      onchange="window.projectObject.updateFieldFilter('algorithms')" id="algorithms" />
 
                     <h3 class="ai">Algorithms</h3>
                   </div>
                   <div class="rectangle-container">
-                    <input class="frame-inner" type="checkbox" onchange="window.projectObject.Bioinformatics()" id="BioinformaticsCheckbox"/>
+                    <input class="frame-inner" type="checkbox"
+                      onchange="window.projectObject.updateFieldFilter('Bioinformatics')" id="Bioinformatics" />
 
                     <h3 class="ai">Bioinformatics</h3>
                   </div>
@@ -161,7 +170,7 @@
               </div>
             </div>
           </div>
- 
+
           <div class="frame-wrapper1">
             <div class="frame-wrapper2">
               <div class="frame-parent4">
@@ -172,32 +181,38 @@
                 </div>
                 <div class="frame-parent3">
                   <div class="rectangle-container">
-                    <input class="frame-item" type="checkbox"  onchange="window.projectObject.CMU()" id="CMUCheckbox" />
+                    <input class="frame-item" type="checkbox" onchange="window.projectObject.updateUniFilter('CMU')"
+                      id="CMU" />
 
                     <h3 class="ai">CMU</h3>
                   </div>
                   <div class="rectangle-container">
-                    <input class="frame-item" type="checkbox" onchange="window.projectObject.Sharif()" id="SharifCheckbox"/>
+                    <input class="frame-item" type="checkbox" onchange="window.projectObject.updateUniFilter('Sharif')"
+                      id="Sharif" />
 
                     <h3 class="ai">Sharif</h3>
                   </div>
                   <div class="rectangle-container">
-                    <input class="frame-inner" type="checkbox" onchange="window.projectObject.MIT()" id="MITCheckbox"/>
+                    <input class="frame-inner" type="checkbox" onchange="window.projectObject.updateUniFilter('MIT')"
+                      id="MIT" />
 
                     <h3 class="ai">MIT</h3>
                   </div>
                   <div class="rectangle-container">
-                    <input class="frame-inner" type="checkbox" onchange="window.projectObject.WU()" id="WUCheckbox"/>
+                    <input class="frame-inner" type="checkbox" onchange="window.projectObject.updateUniFilter('WU')"
+                      id="WU" />
 
                     <h3 class="ai">WU</h3>
                   </div>
                   <div class="rectangle-container">
-                    <input class="frame-inner" type="checkbox" onchange="window.projectObject.Stanford()" id="StanfordCheckbox"/>
+                    <input class="frame-inner" type="checkbox"
+                      onchange="window.projectObject.updateUniFilter('Stanford')" id="Stanford" />
 
                     <h3 class="ai">Stanford</h3>
                   </div>
                   <div class="rectangle-container">
-                    <input class="frame-inner" type="checkbox" onchange="window.projectObject.Penn()" id="PennCheckbox"/>
+                    <input class="frame-inner" type="checkbox" onchange="window.projectObject.updateUniFilter('Penn')"
+                      id="Penn" />
 
                     <h3 class="ai">Penn</h3>
                   </div>

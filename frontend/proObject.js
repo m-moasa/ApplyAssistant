@@ -9,8 +9,8 @@ const position = {
 }
 class proObject {
 static projectList1=[];
-static fieldFilter={ };
-static  universityFilter={};
+static fieldFilter=[];
+static  universityFilter=[];
 constructor(projectList,fieldFilter,universityFilter) {
   this.projectList = projectList;
   this.fieldFilter=fieldFilter;
@@ -32,170 +32,31 @@ async createProjectList(){
 
 }
 
-async sendFilterListsToBack(){
- // send the list to the back here this is the hash map to send : this.fieldFilter , this.universityFilter
-  console.log(this.fieldFilter," fieldFilter");
-  console.log(this.universityFilter," universityFilter");
-}
-
-CMU(){
-  var checkbox = document.getElementById("CMUCheckbox");
+updateUniFilter(uniName){
+  var checkbox = document.getElementById(uniName);
   if (checkbox.checked) {
-    this.universityFilter["CMU"]="true";
-    console.log("CMU is checked.");
+    this.universityFilter.push(uniName);
   } else {
-    this.universityFilter["CMU"]="false";
-    console.log("CMU is unchecked.");
+    const index = this.universityFilter.indexOf(uniName);
+    if (index > -1) { // only splice array when item is found
+      this.universityFilter.splice(index, 1); // 2nd parameter means remove one item only
     }
-  
-  this.sendFilterListsToBack()
+    }
+    this.updateProject();
 }
 
-
-Sharif(){
-  var checkbox = document.getElementById("SharifCheckbox");
+updateFieldFilter(fieldName){
+  var checkbox = document.getElementById(fieldName);
   if (checkbox.checked) {
-    this.universityFilter["Sharif"]="true";
-    console.log("Sharif is checked.");
+    this.fieldFilter.push(fieldName);
   } else {
-    this.universityFilter["Sharif"]="false";
-    console.log("Sharif is unchecked.");
+    const index = this.fieldFilter.indexOf(fieldName);
+    if (index > -1) { // only splice array when item is found
+      this.fieldFilter.splice(index, 1); // 2nd parameter means remove one item only
     }
-  
-  this.sendFilterListsToBack()
+  }
+  this.updateProject();
 }
-
-MIT(){
-  var checkbox = document.getElementById("MITCheckbox");
-  if (checkbox.checked) {
-    this.universityFilter["MIT"]="true";
-    console.log("CMITMU is checked.");
-  } else {
-    this.universityFilter["MIT"]="false";
-    console.log("MIT is unchecked.");
-    }
-  
-  this.sendFilterListsToBack()
-}
-
-WU(){
-  var checkbox = document.getElementById("WUCheckbox");
-  if (checkbox.checked) {
-    this.universityFilter["WU"]="true";
-    console.log("WU is checked.");
-  } else {
-    this.universityFilter["WU"]="false";
-    console.log("WU is unchecked.");
-    }
-  
-  this.sendFilterListsToBack()
-}
-
-Stanford(){
-  var checkbox = document.getElementById("StanfordCheckbox");
-  if (checkbox.checked) {
-    this.universityFilter["Stanford"]="true";
-    console.log("Stanford is checked.");
-  } else {
-    this.universityFilter["Stanford"]="false";
-    console.log("Stanford is unchecked.");
-    }
-  
-  this.sendFilterListsToBack()
-}
-
-Penn(){
-  var checkbox = document.getElementById("PennCheckbox");
-  if (checkbox.checked) {
-    this.universityFilter["Penn"]="true";
-    console.log("Penn is checked.");
-  } else {
-    this.universityFilter["Penn"]="false";
-    console.log("Penn is unchecked.");
-    }
-  
-  this.sendFilterListsToBack()
-}
-
-AI() {
-  var checkbox = document.getElementById("AICheckbox");
-  if (checkbox.checked) {
-    this.fieldFilter["AI"]="true";
-    console.log("ai is checked.");
-  } else {
-    this.fieldFilter["AI"]="false";
-    console.log("ai is unchecked.");
-    }
-  
-  this.sendFilterListsToBack()
-  
-}
-SoftwareEngineering() {
-  var checkbox = document.getElementById("SoftwareEngineeringCheckbox");
-  if (checkbox.checked) {
-    this.fieldFilter["SoftwareEngineering"]="true";
-    console.log("SoftwareEngineering is checked.");
-  } else {
-    this.fieldFilter["SoftwareEngineering"]="false";
-    console.log("SoftwareEngineering is unchecked.");
-    }
-  
-  this.sendFilterListsToBack()
-
-}
-ML() {
-  var checkbox = document.getElementById("MLCheckbox");
-  if (checkbox.checked) {
-    this.fieldFilter["ML"]="true";
-    console.log("ML is checked.");
-  } else {
-    this.fieldFilter["ML"]="false";
-    console.log("ML is unchecked.");
-    }
-  
-  this.sendFilterListsToBack()
-
-}
-networks() {
-  var checkbox = document.getElementById("networksCheckbox");
-  if (checkbox.checked) {
-    this.fieldFilter["networks"]="true";
-    console.log("networks is checked.");
-  } else {
-    this.fieldFilter["networks"]="false";
-    console.log("networks is unchecked.");
-    }
-  
-  this.sendFilterListsToBack()
-
-}
-algorithms() {
-  var checkbox = document.getElementById("algorithmsCheckbox");
-  if (checkbox.checked) {
-    this.fieldFilter["algorithms"]="true";
-    console.log("algorithms is checked.");
-  } else {
-    this.fieldFilter["algorithms"]="false";
-    console.log("algorithms is unchecked.");
-    }
-  
-  this.sendFilterListsToBack()
-
-}
-Bioinformatics() {
-  var checkbox = document.getElementById("BioinformaticsCheckbox");
-  if (checkbox.checked) {
-    this.fieldFilter["Bioinformatics"]="true";
-    console.log("Bioinformatics is checked.");
-  } else {
-    this.fieldFilter["Bioinformatics"]="false";
-    console.log("Bioinformatics is unchecked.");
-    }
-  
-  this.sendFilterListsToBack()
-
-}
-
 
 addProject(project){
   console.log(project)
@@ -208,6 +69,9 @@ updateProject() {
     this.projectList.removeChild(this.projectList.firstChild);
   }
     proObject.projectList1.forEach((project,index) => {
+      if ((this.fieldFilter.includes(project.fields) || this.fieldFilter.length == 0) &&
+      (this.universityFilter.includes(project.university) || this.universityFilter.length == 0)){
+
       const section = document.createElement("SECTION");
       section.classList.add("frame-section");
 
@@ -281,7 +145,7 @@ updateProject() {
       section.appendChild(applyButton);
  
       this.projectList.appendChild(section);
-
+    }
             });
           }
 
