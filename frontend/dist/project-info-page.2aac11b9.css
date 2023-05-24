@@ -1,0 +1,140 @@
+.vector-icon {
+  width: 19.18px;
+  height: 34.12px;
+  position: absolute;
+  top: -1.06px;
+  left: -2.12px;
+}
+
+.vector-wrapper {
+  cursor: pointer;
+  width: 16px;
+  height: 32px;
+  background-color: #0000;
+  border: 0;
+  padding: 0;
+  position: relative;
+}
+
+.aa-icon {
+  width: 37px;
+  height: 23px;
+  position: relative;
+}
+
+.frame-parent7 {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 116px;
+  display: flex;
+}
+
+.agile-optimizations-in {
+  font-weight: 700;
+  position: relative;
+}
+
+.i-hope-this {
+  margin: 0;
+}
+
+.i-hope-this-container {
+  font-size: inherit;
+  width: 749px;
+  height: 710px;
+  flex-shrink: 0;
+  margin: 0;
+  font-family: inherit;
+  font-weight: 400;
+  display: inline-block;
+  position: relative;
+}
+
+.contact-owner {
+  font-size: var(--font-size-xl);
+  font-weight: 900;
+  font-family: var(--font-roboto);
+  color: var(--color-white);
+  text-align: center;
+  margin: 0;
+  position: relative;
+}
+
+.contact-owner-wrapper {
+  cursor: pointer;
+  border: 1px solid var(--color-mediumblue-100);
+  background-color: var(--color-mediumblue-100);
+  border-radius: var(--br-3xs);
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 11px 307px;
+  display: flex;
+  overflow: hidden;
+}
+
+.i-hope-this-message-finds-you-parent {
+  gap: var(--gap-5xl);
+  text-align: justify;
+  font-size: var(--font-size-5xl);
+  color: #222;
+  flex-direction: column;
+}
+
+.agile-optimizations-in-project-parent, .component-1-inner, .i-hope-this-message-finds-you-parent {
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.agile-optimizations-in-project-parent {
+  flex-direction: column;
+  gap: 22px;
+}
+
+.component-1-inner {
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  width: 1321px;
+  padding: var(--padding-18xl) 230px var(--padding-18xl) 294px;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: -56px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px 3px #69696940;
+}
+
+.component-1 {
+  width: 1265px;
+  height: 921px;
+  position: relative;
+}
+
+.frame-parent6 {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 64px;
+  display: flex;
+  position: absolute;
+  top: 67px;
+  left: 39px;
+}
+
+.project-info-page {
+  background-color: var(--color-gray);
+  width: 100%;
+  height: 1215px;
+  text-align: left;
+  font-size: var(--font-size-21xl);
+  color: var(--color-black);
+  font-family: var(--font-times-new-roman);
+  position: relative;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=project-info-page.2aac11b9.css.map */

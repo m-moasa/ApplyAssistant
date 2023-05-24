@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./project-addition-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Times New Roman:ital,wght@0,400;0,700;1,400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap"
+    />
+  </head>
+  <body>
+    <script src="proObject.js"></script>
+    <script type="text/javascript">
+      var encodedObject = window.location.search.split("=")[1];
+      var decodedObject = decodeURIComponent(encodedObject);
+      var parsedObject = JSON.parse(decodedObject);
+      var projectsObject = new proObject(
+        parsedObject.projectList,
+        parsedObject.fieldFilter,
+        parsedObject.universityFilter
+      );
+      window.projectsObject = projectsObject;
+    </script>
+
+    <div class="project-addition-page">
+      <div class="project-addition-page-inner">
+        <div class="define-a-project-parent">
+          <h1 class="define-a-project2">Define a Project</h1>
+          <div class="frame-parent6">
+            <div class="ellipse-container">
+              <img class="frame-child10" alt="" src="./public/ellipse-5.svg" />
+
+              <h1 class="what-is-your">What is your project title?</h1>
+            </div>
+            <input class="component-child" type="text" id="projectTitle" />
+          </div>
+          <div class="frame-parent6">
+            <div class="ellipse-container">
+              <img class="frame-child10" alt="" src="./public/ellipse-5.svg" />
+
+              <h1 class="what-is-your1">What is your fullname?</h1>
+            </div>
+            <input
+              class="component-child"
+              type="text"
+              id="proffessorFullname"
+            />
+          </div>
+          <div class="frame-parent6">
+            <div class="ellipse-container">
+              <img class="frame-child10" alt="" src="./public/ellipse-5.svg" />
+
+              <h1 class="what-is-your1">What is your project Field?</h1>
+            </div>
+            <input class="component-child" type="text" id="proffessorField" />
+          </div>
+          <div class="frame-parent6">
+            <div class="ellipse-container">
+              <img class="frame-child10" alt="" src="./public/ellipse-5.svg" />
+
+              <h1 class="what-is-your1">
+                What is the project's, university/institute of origin?
+              </h1>
+            </div>
+            <input
+              class="component-child"
+              type="text"
+              id="proffessorUniversity"
+            />
+          </div>
+          <div class="frame-parent6">
+            <div class="ellipse-container">
+              <img class="frame-child10" alt="" src="./public/ellipse-5.svg" />
+
+              <h1 class="what-is-your1">
+                When is the candidate submissions deadline?
+              </h1>
+            </div>
+            <input
+              class="component-child"
+              type="date"
+              id="proffessordeadline"
+            />
+          </div>
+          <div class="frame-parent6">
+            <div class="ellipse-container">
+              <img class="frame-child10" alt="" src="./public/ellipse-5.svg" />
+
+              <h1 class="what-is-your1">
+                What is your email address? (to connect with candidates)
+              </h1>
+            </div>
+            <input class="component-child" type="email" id="proffessoremail" />
+          </div>
+          <div class="frame-parent6">
+            <div class="ellipse-container">
+              <img class="frame-child10" alt="" src="./public/ellipse-5.svg" />
+
+              <h1 class="what-is-your1">
+                What documents should the candidate send to you?
+              </h1>
+            </div>
+            <input
+              class="component-child"
+              type="text"
+              id="proffessorRequireDocuments"
+            />
+          </div>
+          <div class="frame-parent6">
+            <div class="ellipse-container">
+              <img class="frame-child10" alt="" src="./public/ellipse-5.svg" />
+
+              <h1 class="what-is-your1">
+                Give us a 20-word summary of your project.
+              </h1>
+            </div>
+            <input class="component-child" type="text" id="proffessorsummary" />
+          </div>
+          <div class="instance-parent">
+            <div class="frame-parent6">
+              <div class="ellipse-container">
+                <img
+                  class="frame-child10"
+                  alt=""
+                  src="./public/ellipse-5.svg"
+                />
+
+                <h1 class="what-is-your1">
+                  Give us a detailed explanation of your project.
+                </h1>
+              </div>
+              <input
+                class="instance-child5"
+                type="text"
+                id="proffessorexplanation"
+              />
+            </div>
+            <textarea class="rectangle-textarea"> </textarea>
+          </div>
+          <button
+            class="sumbit-wrapper"
+            onclick="  window.projectsObject.submitProject()"
+            id="mySubmitBTN"
+          >
+            <h1 class="sumbit">submit</h1>
+          </button>
+        </div>
+      </div>
+
+      <div class="frame-parent15">
+        <button class="vector-wrapper">
+          <img class="vector-icon" alt="" src="./public/vector-14.svg" />
+        </button>
+        <button class="aa-wrapper">
+          <img class="aa-icon" alt="" src="./public/aa.svg" />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

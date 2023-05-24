@@ -5,7 +5,9 @@ const position = {
     university: "university",
     deadline: "deadline",
     fields: "fields",
-    detail: "detail"
+    detail: "detail",
+    summary: "Summary",
+    requiredDocs: "RequireDocuments"
 };
 class proObject {
     static projectList1 = [];
@@ -17,12 +19,12 @@ class proObject {
         this.universityFilter = universityFilter;
     }
     async createProjectList() {
-        var projectsList;
+        var projectsList1;
         this.url = "http://localhost:5001/api/projects/";
         await fetch(this.url).then((res)=>res.json()).then((data)=>{
-            projectsList = data;
+            projectsList1 = data;
         });
-        proObject.projectList1 = projectsList;
+        proObject.projectList1 = projectsList1;
         this.updateProject();
     }
     updateUniFilter(uniName) {
@@ -30,7 +32,8 @@ class proObject {
         if (checkbox.checked) this.universityFilter.push(uniName);
         else {
             const index = this.universityFilter.indexOf(uniName);
-            if (index > -1) this.universityFilter.splice(index, 1); // 2nd parameter means remove one item only
+            if (index > -1) // only splice array when item is found
+            this.universityFilter.splice(index, 1); // 2nd parameter means remove one item only
         }
         this.updateProject();
     }
@@ -39,9 +42,50 @@ class proObject {
         if (checkbox.checked) this.fieldFilter.push(fieldName);
         else {
             const index = this.fieldFilter.indexOf(fieldName);
-            if (index > -1) this.fieldFilter.splice(index, 1); // 2nd parameter means remove one item only
+            if (index > -1) // only splice array when item is found
+            this.fieldFilter.splice(index, 1); // 2nd parameter means remove one item only
         }
         this.updateProject();
+    }
+    async sendDefineProjectToBack(position) {
+        this.url = "http://localhost:5001/api/projects/";
+        fetch(this.url, {
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(position)
+        });
+        // send the  define project to back
+        console.log(position, " new_position");
+        // TODO : should uncomment these 2 lines after getting response from the back to update the positions
+        proObject.projectList1 = projectsList;
+        this.updateProject();
+        window.location.href = "index.html";
+    }
+    submitProject() {
+        console.log("submitProject");
+        var projectTitle = document.getElementById("projectTitle").value;
+        var proffessorFullname = document.getElementById("proffessorFullname").value;
+        var proffessorField = document.getElementById("proffessorField").value;
+        var proffessorUniversity = document.getElementById("proffessorUniversity").value;
+        var proffessorDeadline = document.getElementById("proffessordeadline").value;
+        var proffessorEmail = document.getElementById("proffessoremail").value;
+        var proffessorRequireDocuments = document.getElementById("proffessorRequireDocuments").value;
+        var proffessorSummary = document.getElementById("proffessorsummary").value;
+        var proffessorExplanation = document.getElementById("proffessorexplanation").value;
+        const projectData = Object.create(position);
+        projectData.name = projectTitle;
+        projectData.faculty = proffessorFullname;
+        projectData.university = proffessorUniversity;
+        projectData.deadline = proffessorDeadline;
+        projectData.fields = proffessorField;
+        projectData.detail = proffessorExplanation;
+        projectData.email = proffessorEmail;
+        projectData.summary = proffessorSummary;
+        projectData.requiredDocs = proffessorRequireDocuments;
+        this.sendDefineProjectToBack(projectData);
     }
     addProject(project) {
         console.log(project);
@@ -58,13 +102,9 @@ class proObject {
                 projectNameParent.classList.add("project-name-parent");
                 const projectName = document.createElement("B");
                 projectName.classList.add("project-name");
-                // const projectNameLine1 = document.createElement("P");
-                // projectNameLine1.classList.add("project");
-                // projectNameLine1.textContent = "Project";
                 const projectNameLine2 = document.createElement("P");
                 projectNameLine2.classList.add("project");
                 projectNameLine2.textContent = project.name;
-                // projectName.appendChild(projectNameLine1);
                 projectName.appendChild(projectNameLine2);
                 const facultyName = document.createElement("DIV");
                 facultyName.classList.add("faculty-name");
@@ -98,7 +138,8 @@ class proObject {
                     var subject1 = "Request for information on project " + project.name;
                     var emailBody = "Dear " + project.faculty + ",\n\nI am interested in learning more about your " + project.name + " project. Can you please provide additional information about the project and the application process?\n\nThank you,\n[Your Name]";
                     var url = "https://mail.google.com/mail/?view=cm&to=" + email1 + "&su=" + encodeURIComponent(subject1) + "&body=" + encodeURIComponent(emailBody);
-                    window.open(url);
+                    var encodedProjectObject = encodeURIComponent(JSON.stringify(window.projectObject));
+                    window.location.href = "./project-info-page.html?data==" + encodedProjectObject + "==" + url;
                 });
                 applyButton.classList.add("apply-wrapper");
                 const apply = document.createElement("B");
@@ -109,6 +150,12 @@ class proObject {
                 section.appendChild(applyButton);
                 this.projectList.appendChild(section);
             }
+        });
+    }
+    connect(url) {
+        var applyButton = document.getElementById("connectBTN");
+        applyButton.addEventListener("click", function() {
+            window.open(url);
         });
     }
     remove(index) {

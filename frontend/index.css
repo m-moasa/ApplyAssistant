@@ -418,7 +418,8 @@
 .details-wrapper {
   cursor: pointer;
   border: 1px solid var(--color-mediumblue);
-  padding: var(--padding-xs) var(--padding-148xl) var(--padding-xs) var(--padding-124xl);
+  padding: var(--padding-xs) var(--padding-148xl) var(--padding-xs)
+    var(--padding-124xl);
   background-color: var(--color-mediumblue);
   box-sizing: border-box;
   width: 361px;
@@ -786,7 +787,6 @@
   left: 335px;
   width: 925px;
   /* height: 350.77px; */
-
 }
 
 .project-list {
@@ -814,7 +814,6 @@
   justify-content: space-between;
   font-size: var(--font-size-xl);
 }
-
 
 .frame-form {
   position: absolute;
@@ -846,8 +845,7 @@
 .faculty-name1
 
 /* .faculty-name1, */
-/* .project-name  */
-  {
+/* .project-name  */ {
   position: relative;
   font-size: var(--font-size-21xl);
   -webkit-text-stroke: 0.3px #fff;
@@ -881,7 +879,6 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-
 }
 
 .apply {
@@ -890,7 +887,6 @@
   font-family: var(--font-times-new-roman);
   color: var(--color-white);
   text-align: left;
-
 }
 
 .frame-section {

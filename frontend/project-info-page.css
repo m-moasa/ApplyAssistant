@@ -1,0 +1,125 @@
+.vector-icon {
+  position: absolute;
+  top: -1.06px;
+  left: -2.12px;
+  width: 19.18px;
+  height: 34.12px;
+}
+.vector-wrapper {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  width: 16px;
+  height: 32px;
+}
+.aa-icon {
+  position: relative;
+  width: 37px;
+  height: 23px;
+}
+.frame-parent7 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 116px;
+}
+.agile-optimizations-in {
+  position: relative;
+  font-weight: 700;
+}
+.i-hope-this {
+  margin: 0;
+}
+.i-hope-this-container {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+  width: 749px;
+  height: 710px;
+  flex-shrink: 0;
+}
+.contact-owner {
+  margin: 0;
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-weight: 900;
+  font-family: var(--font-roboto);
+  color: var(--color-white);
+  text-align: center;
+}
+.contact-owner-wrapper {
+  cursor: pointer;
+  border: 1px solid var(--color-mediumblue-100);
+  padding: 11px 307px;
+  background-color: var(--color-mediumblue-100);
+  border-radius: var(--br-3xs);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.i-hope-this-message-finds-you-parent {
+  flex-direction: column;
+  gap: var(--gap-5xl);
+  text-align: justify;
+  font-size: var(--font-size-5xl);
+  color: #222;
+}
+.agile-optimizations-in-project-parent,
+.component-1-inner,
+.i-hope-this-message-finds-you-parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.agile-optimizations-in-project-parent {
+  flex-direction: column;
+  gap: 22px;
+}
+.component-1-inner {
+  position: absolute;
+  top: 0;
+  left: -56px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 20px 3px rgba(105, 105, 105, 0.25);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  width: 1321px;
+  overflow: hidden;
+  flex-direction: row;
+  padding: var(--padding-18xl) 230px var(--padding-18xl) 294px;
+}
+.component-1 {
+  position: relative;
+  width: 1265px;
+  height: 921px;
+}
+.frame-parent6 {
+  position: absolute;
+  top: 67px;
+  left: 39px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 64px;
+}
+.project-info-page {
+  position: relative;
+  background-color: var(--color-gray);
+  width: 100%;
+  height: 1215px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-21xl);
+  color: var(--color-black);
+  font-family: var(--font-times-new-roman);
+}
