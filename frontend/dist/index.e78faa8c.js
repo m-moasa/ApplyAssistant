@@ -19,12 +19,12 @@ class proObject {
         this.universityFilter = universityFilter;
     }
     async createProjectList() {
-        var projectsList1;
+        var projectsList;
         this.url = "http://localhost:5001/api/projects/";
         await fetch(this.url).then((res)=>res.json()).then((data)=>{
-            projectsList1 = data;
+            projectsList = data;
         });
-        proObject.projectList1 = projectsList1;
+        proObject.projectList1 = projectsList;
         this.updateProject();
     }
     updateUniFilter(uniName) {
@@ -60,8 +60,8 @@ class proObject {
         // send the  define project to back
         console.log(position, " new_position");
         // TODO : should uncomment these 2 lines after getting response from the back to update the positions
-        proObject.projectList1 = projectsList;
-        this.updateProject();
+        // proObject.projectList1 = projectsList;
+        // this.updateProject();
         window.location.href = "index.html";
     }
     submitProject() {

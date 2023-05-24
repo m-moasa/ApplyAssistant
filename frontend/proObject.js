@@ -75,8 +75,8 @@ class proObject {
 
     // TODO : should uncomment these 2 lines after getting response from the back to update the positions
 
-    proObject.projectList1 = projectsList;
-    this.updateProject();
+    // proObject.projectList1 = projectsList;
+    // this.updateProject();
 
     window.location.href = "index.html";
   }
