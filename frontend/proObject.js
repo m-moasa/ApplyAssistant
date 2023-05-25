@@ -78,12 +78,12 @@ class proObject {
     // proObject.projectList1 = projectsList;
     // this.updateProject();
 
-    window.location.href = "index.html";
+    // window.location.href = "index.html";
   }
 
-  back(){
+  back() {
     console.log("AAAqqqqqqqqqqq");
-        // this.updateProject();
+    // this.updateProject();
 
     window.location.href = "index.html";
   }
@@ -118,7 +118,7 @@ class proObject {
     projectData.email = proffessorEmail;
     projectData.summary = proffessorSummary;
     projectData.requiredDocs = proffessorRequireDocuments;
-
+    console.log(projectData);
     this.sendDefineProjectToBack(projectData);
   }
 
@@ -202,17 +202,17 @@ class proObject {
             JSON.stringify(window.projectObject)
           );
           var encodedProjectname = encodeURIComponent(
-            JSON.stringify(project.name  )
+            JSON.stringify(project.name)
           );
-          var encodedProjectdetail= encodeURIComponent(
-            JSON.stringify(project.detail  )
+          var encodedProjectdetail = encodeURIComponent(
+            JSON.stringify(project.detail)
           );
 
           window.location.href =
             "./project-info-page.html?data===" +
             encodedProjectObject +
             "===" +
-            url+
+            url +
             "===" +
             encodedProjectname +
             "===" +
