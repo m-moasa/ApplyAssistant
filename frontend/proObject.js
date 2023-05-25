@@ -81,6 +81,12 @@ class proObject {
     window.location.href = "index.html";
   }
 
+  back(){
+    console.log("AAAqqqqqqqqqqq");
+        // this.updateProject();
+
+    window.location.href = "index.html";
+  }
   submitProject() {
     console.log("submitProject");
 
@@ -166,13 +172,7 @@ class proObject {
 
         const detailDiv = document.createElement("DIV");
         detailDiv.classList.add("detaildetaildetaildetaildetail");
-
-        project.detail.split("\n").forEach((line) => {
-          const p = document.createElement("P");
-          p.classList.add("project");
-          p.textContent = line;
-          detailDiv.appendChild(p);
-        });
+        detailDiv.textContent = project.summary;
 
         projectNameParent.appendChild(projectName);
         projectNameParent.appendChild(facultyName);
@@ -201,11 +201,22 @@ class proObject {
           var encodedProjectObject = encodeURIComponent(
             JSON.stringify(window.projectObject)
           );
+          var encodedProjectname = encodeURIComponent(
+            JSON.stringify(project.name  )
+          );
+          var encodedProjectdetail= encodeURIComponent(
+            JSON.stringify(project.detail  )
+          );
+
           window.location.href =
-            "./project-info-page.html?data==" +
+            "./project-info-page.html?data===" +
             encodedProjectObject +
-            "==" +
-            url;
+            "===" +
+            url+
+            "===" +
+            encodedProjectname +
+            "===" +
+            encodedProjectdetail;
         });
 
         applyButton.classList.add("apply-wrapper");

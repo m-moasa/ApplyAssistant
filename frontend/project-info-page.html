@@ -16,11 +16,21 @@
   </head>
   <body>
     <script src="proObject.js"></script>
-    <script type="text/javascript">
-      var encodedObject = window.location.search.split("==")[1];
-      var encodedPositionObject = window.location.search.split("==")[2];
+    <script type="text/javascript">        
+
+      var encodedObject = window.location.search.split("===")[1];
+      var encodedPositionObject = window.location.search.split("===")[2];
+      var encodedPositionName = window.location.search.split("===")[3];
+      var encodedPositionDetaile = window.location.search.split("===")[4];
       var decodedObject = decodeURIComponent(encodedObject);
       var parsedObject = JSON.parse(decodedObject);
+
+      var decodedObjectName = decodeURIComponent(encodedPositionName);
+      var parsedObjectName = JSON.parse(decodedObjectName);
+
+      var decodedObjectDetaile = decodeURIComponent(encodedPositionDetaile);
+      var parsedObjectDetaile = JSON.parse(decodedObjectDetaile);
+   
       var projectsObject = new proObject(
         parsedObject.projectList,
         parsedObject.fieldFilter,
@@ -28,63 +38,33 @@
       );
       window.projectsObject = projectsObject;
       window.position = encodedPositionObject;
+      window.positionName=parsedObjectName;
+      window.Detaile=parsedObjectDetaile;
+
     </script>
     <div class="project-info-page">
       <div class="frame-parent6">
         <div class="frame-parent7">
           <button class="vector-wrapper">
-            <img class="vector-icon" alt="" src="./public/vector-14.svg" />
+            <img class="vector-icon" alt="" src="./public/vector-14.svg" onclick="window.projectsObject.back()" />
           </button>
           <img class="aa-icon" alt="" src="./public/aa.svg" />
         </div>
         <div class="component-1">
           <div class="component-1-inner">
             <div class="agile-optimizations-in-project-parent">
-              <strong class="agile-optimizations-in"
-                >Agile Optimizations in Projects</strong
+              <strong  id="positionNameValue" class="agile-optimizations-in"
+                > </strong
               >
               <div class="i-hope-this-message-finds-you-parent">
-                <h2 class="i-hope-this-container">
-                  <p class="i-hope-this">
-                    I hope this message finds you well. I am reaching out to you
-                    as a potential candidate for cooperation on an exciting
-                    academic project focusing on Agile optimizations in AI
-                    projects. As a Professor in CAL Tech University, I am
-                    actively seeking dedicated individuals like yourself who are
-                    interested in pushing the boundaries of AI and software
-                    engineering.
-                  </p>
-                  <p class="i-hope-this">
-                    The main objective of this project is to explore and
-                    implement Agile methodologies in the context of AI
-                    development. The project will involve designing and
-                    developing AI models, algorithms, and frameworks while
-                    adopting Agile principles such as iterative development,
-                    continuous integration, and frequent feedback loops. We aim
-                    to enhance the efficiency, adaptability, and responsiveness
-                    of AI projects through the application of Agile practices.
-                  </p>
-                  <p class="i-hope-this">
-                    By participating in this project, you will have the
-                    opportunity to contribute to cutting-edge research and gain
-                    valuable hands-on experience in the intersection of AI and
-                    software engineering. You will work closely with a team of
-                    researchers, fellow students, and industry professionals,
-                    leveraging their expertise and collaborating to overcome
-                    challenges in Agile AI development.
-                  </p>
-                  <p class="i-hope-this">
-                    The project is expected to be completed by June 30, 2023,
-                    and successful candidates will receive academic credit for
-                    their participation. This project presents an excellent
-                    opportunity to strengthen your research portfolio and expand
-                    your knowledge in the rapidly evolving field of AI.
-                  </p>
-                  <p class="i-hope-this">
-                    If you are interested in joining this project, please
-                    respond to this email with your resume and a brief statement
-                    outlining your research interests and relevant experience.
-                  </p>
+                <h2  class="i-hope-this-container">
+                  <p id="datailContent"></p>
+               <script>
+                const positionNameElement = document.getElementById('positionNameValue');
+                const datails = document.getElementById('datailContent');
+                datails.textContent= window.Detaile;
+                positionNameElement.textContent = window.positionName;
+                </script>
                 </h2>
                 <button
                   class="contact-owner-wrapper"

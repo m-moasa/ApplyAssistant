@@ -40,8 +40,10 @@
   font-weight: 400;
   font-family: inherit;
   display: inline-block;
-  width: 749px;
-  height: 710px;
+  /* width: 749px; */
+  /* height: 710px; */
+  width: wrapper;
+  height: wrapper;
   flex-shrink: 0;
 }
 .contact-owner {

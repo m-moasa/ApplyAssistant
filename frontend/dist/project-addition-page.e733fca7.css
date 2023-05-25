@@ -37,6 +37,8 @@
   box-sizing: border-box;
   width: 807px;
   height: 54px;
+  text-indent: 20px;
+  font-size: 20px;
   position: relative;
 }
 
@@ -61,6 +63,8 @@
   background-color: var(--color-gray);
   box-sizing: border-box;
   width: 807px;
+  text-indent: 20px;
+  font-size: 20px;
   position: relative;
 }
 
@@ -162,7 +166,6 @@
 }
 
 .aa-wrapper {
-  cursor: pointer;
   background-color: #0000;
   border: 0;
   padding: 0;

@@ -64,6 +64,11 @@ class proObject {
         // this.updateProject();
         window.location.href = "index.html";
     }
+    back() {
+        console.log("AAAqqqqqqqqqqq");
+        // this.updateProject();
+        window.location.href = "index.html";
+    }
     submitProject() {
         console.log("submitProject");
         var projectTitle = document.getElementById("projectTitle").value;
@@ -120,12 +125,7 @@ class proObject {
                 fieldsDiv.textContent = project.fields;
                 const detailDiv = document.createElement("DIV");
                 detailDiv.classList.add("detaildetaildetaildetaildetail");
-                project.detail.split("\n").forEach((line)=>{
-                    const p = document.createElement("P");
-                    p.classList.add("project");
-                    p.textContent = line;
-                    detailDiv.appendChild(p);
-                });
+                detailDiv.textContent = project.summary;
                 projectNameParent.appendChild(projectName);
                 projectNameParent.appendChild(facultyName);
                 projectNameParent.appendChild(universityName);
@@ -139,7 +139,9 @@ class proObject {
                     var emailBody = "Dear " + project.faculty + ",\n\nI am interested in learning more about your " + project.name + " project. Can you please provide additional information about the project and the application process?\n\nThank you,\n[Your Name]";
                     var url = "https://mail.google.com/mail/?view=cm&to=" + email1 + "&su=" + encodeURIComponent(subject1) + "&body=" + encodeURIComponent(emailBody);
                     var encodedProjectObject = encodeURIComponent(JSON.stringify(window.projectObject));
-                    window.location.href = "./project-info-page.html?data==" + encodedProjectObject + "==" + url;
+                    var encodedProjectname = encodeURIComponent(JSON.stringify(project.name));
+                    var encodedProjectdetail = encodeURIComponent(JSON.stringify(project.detail));
+                    window.location.href = "./project-info-page.html?data===" + encodedProjectObject + "===" + url + "===" + encodedProjectname + "===" + encodedProjectdetail;
                 });
                 applyButton.classList.add("apply-wrapper");
                 const apply = document.createElement("B");

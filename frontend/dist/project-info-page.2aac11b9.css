@@ -41,8 +41,8 @@
 
 .i-hope-this-container {
   font-size: inherit;
-  width: 749px;
-  height: 710px;
+  width: wrapper;
+  height: wrapper;
   flex-shrink: 0;
   margin: 0;
   font-family: inherit;

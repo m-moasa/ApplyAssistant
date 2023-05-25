@@ -34,6 +34,8 @@
   box-sizing: border-box;
   width: 807px;
   height: 54px;
+  font-size: 20px;
+  text-indent: 20px;
 }
 .frame-parent6 {
   display: flex;
@@ -56,6 +58,8 @@
   position: relative;
   box-sizing: border-box;
   width: 807px;
+  font-size: 20px;
+  text-indent: 20px;
 }
 .instance-child5 {
   border-radius: var(--br-8xl);
@@ -145,7 +149,7 @@
   left: 0;
 }
 .aa-wrapper {
-  cursor: pointer;
+  /* cursor: pointer; */
   border: 0;
   padding: 0;
   background-color: transparent;
