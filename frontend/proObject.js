@@ -78,7 +78,7 @@ class proObject {
     // proObject.projectList1 = projectsList;
     // this.updateProject();
 
-    // window.location.href = "index.html";
+    window.location.href = "index.html";
   }
 
   back() {
@@ -104,9 +104,7 @@ class proObject {
       "proffessorRequireDocuments"
     ).value;
     var proffessorSummary = document.getElementById("proffessorsummary").value;
-    var proffessorExplanation = document.getElementById(
-      "proffessorexplanation"
-    ).value;
+    var detaileProf = document.getElementById("proffessorexplanation").value;
 
     const projectData = Object.create(position);
     projectData.name = projectTitle;
@@ -114,11 +112,11 @@ class proObject {
     projectData.university = proffessorUniversity;
     projectData.deadline = proffessorDeadline;
     projectData.fields = proffessorField;
-    projectData.detail = proffessorExplanation;
+    projectData.detail = detaileProf;
     projectData.email = proffessorEmail;
     projectData.summary = proffessorSummary;
     projectData.requiredDocs = proffessorRequireDocuments;
-    console.log(projectData);
+
     this.sendDefineProjectToBack(projectData);
   }
 

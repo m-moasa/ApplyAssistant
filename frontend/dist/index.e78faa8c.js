@@ -59,10 +59,10 @@ class proObject {
         });
         // send the  define project to back
         console.log(position, " new_position");
-    // TODO : should uncomment these 2 lines after getting response from the back to update the positions
-    // proObject.projectList1 = projectsList;
-    // this.updateProject();
-    // window.location.href = "index.html";
+        // TODO : should uncomment these 2 lines after getting response from the back to update the positions
+        // proObject.projectList1 = projectsList;
+        // this.updateProject();
+        window.location.href = "index.html";
     }
     back() {
         console.log("AAAqqqqqqqqqqq");
@@ -79,18 +79,17 @@ class proObject {
         var proffessorEmail = document.getElementById("proffessoremail").value;
         var proffessorRequireDocuments = document.getElementById("proffessorRequireDocuments").value;
         var proffessorSummary = document.getElementById("proffessorsummary").value;
-        var proffessorExplanation = document.getElementById("proffessorexplanation").value;
+        var detaileProf = document.getElementById("proffessorexplanation").value;
         const projectData = Object.create(position);
         projectData.name = projectTitle;
         projectData.faculty = proffessorFullname;
         projectData.university = proffessorUniversity;
         projectData.deadline = proffessorDeadline;
         projectData.fields = proffessorField;
-        projectData.detail = proffessorExplanation;
+        projectData.detail = detaileProf;
         projectData.email = proffessorEmail;
         projectData.summary = proffessorSummary;
         projectData.requiredDocs = proffessorRequireDocuments;
-        console.log(projectData);
         this.sendDefineProjectToBack(projectData);
     }
     addProject(project) {
