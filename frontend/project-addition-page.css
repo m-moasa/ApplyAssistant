@@ -108,7 +108,7 @@
 .project-addition-page-inner {
   position: absolute;
   top: 124px;
-  left: 0;
+  left: 300;
   background-color: var(--color-white);
   box-shadow: 0 4px 20px 3px rgba(105, 105, 105, 0.25);
   border-top: 1px solid var(--color-black);
