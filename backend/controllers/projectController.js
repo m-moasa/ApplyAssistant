@@ -25,6 +25,7 @@ const createProject = asyncHandler(async (req, res) => {
     summary,
     requiredDocs,
     isPremium,
+    hasReqPremium,
   } = req.body;
   if (
     !name ||
@@ -56,6 +57,7 @@ const createProject = asyncHandler(async (req, res) => {
     summary,
     requiredDocs,
     isPremium,
+    hasReqPremium,
   });
   res.status(201).json(project);
   console.log(`Recieved POST request`);

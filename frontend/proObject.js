@@ -9,6 +9,7 @@ const position = {
   summary: "Summary",
   requiredDocs: "RequireDocuments",
   isPremium: "isPremium",
+  hasReqPremium: "hasReqPremium",
 };
 class proObject {
   static projectList1 = [];
@@ -125,6 +126,9 @@ class proObject {
     projectData.email = proffessorEmail;
     projectData.summary = proffessorSummary;
     projectData.requiredDocs = proffessorRequireDocuments;
+    projectData.isPremium = false;
+    // TODO
+    projectData.hasReqPremium = false;
 
     this.sendDefineProjectToBack(projectData);
   }

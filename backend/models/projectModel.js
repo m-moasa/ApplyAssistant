@@ -41,6 +41,10 @@ const projectSchema = mongoose.Schema(
       type: Boolean,
       required: [false],
     },
+    hasReqPremium: {
+      type: Boolean,
+      required: [false],
+    },
   },
   {
     timestamp: true,
