@@ -16,6 +16,7 @@ class proObject {
   static projectListPremium = [];
   static fieldFilter = [];
   static universityFilter = [];
+  premiumValue=false
   constructor(projectList, fieldFilter, universityFilter) {
     this.projectList = projectList;
     this.fieldFilter = fieldFilter;
@@ -81,6 +82,7 @@ class proObject {
       body: JSON.stringify(position),
     });
     // send the  define project to back
+    console.log(position.hasReqPremium, " hasReqPremium");
     console.log(position, " new_position");
 
     // TODO : should uncomment these 2 lines after getting response from the back to update the positions
@@ -89,6 +91,23 @@ class proObject {
     // this.updateProject();
 
     window.location.href = "index.html";
+  }
+  premium(){
+    console.log("permium changed")
+    var EmergencyProject = document.getElementById("EmergencyProject").checked;
+    var MoreResumes = document.getElementById("MoreResumes").checked;
+     console.log(MoreResumes,"  ",EmergencyProject)
+
+    if( EmergencyProject || MoreResumes){
+      this.premiumValue =true
+      console.log("hasReqPremium is true now")
+
+    }else{
+      this.premiumValue =false
+      console.log("hasReqPremium is false now")
+
+    }
+
   }
 
   back() {
@@ -128,8 +147,9 @@ class proObject {
     projectData.requiredDocs = proffessorRequireDocuments;
     projectData.isPremium = false;
     // TODO
-    projectData.hasReqPremium = false;
+    projectData.hasReqPremium = this.premiumValue;
 
+    console.log(projectData," position")
     this.sendDefineProjectToBack(projectData);
   }
 

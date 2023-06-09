@@ -109,7 +109,30 @@ window.projectsObject = projectsObject;
             </div>
             <textarea class="rectangle-textarea" id="proffessorexplanation"> </textarea>
           </div>
-          <button class="sumbit-wrapper" onclick="  window.projectsObject.submitProject()" id="mySubmitBTN">
+
+
+
+          <div class="frame-parent6">
+            <div class="ellipse-container">
+              <input class="component-child2" type="checkbox" onchange="window.projectsObject.premium()" id="EmergencyProject">
+              <h1 class="what-is-your1">
+                  Is your project in emergency sutuation?
+              </h1>
+            </div>
+          </div>
+
+
+
+          <div class="frame-parent6">
+            <div class="ellipse-container">
+              <input class="component-child2" type="checkbox" onchange="window.projectsObject.premium()" id="MoreResumes">
+              <h1 class="what-is-your1">
+                  Do you want your project to get more resumes than normal rate?
+              </h1>
+            </div>
+          </div>
+          
+          <button class="sumbit-wrapper" onclick="window.projectsObject.submitProject()" id="mySubmitBTN">
             <h1 class="sumbit">submit</h1>
           </button>
         </div>

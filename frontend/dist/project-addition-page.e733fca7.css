@@ -42,6 +42,18 @@
   position: relative;
 }
 
+.component-child2 {
+  border: 1px solid var(--color-black);
+  background-color: var(--color-gray);
+  border-radius: var(--br-8xl);
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  text-indent: 20px;
+  font-size: 20px;
+  position: relative;
+}
+
 .frame-parent6 {
   justify-content: flex-start;
   align-items: flex-start;
@@ -124,7 +136,7 @@
   border-bottom: 1px solid var(--color-black);
   box-sizing: border-box;
   width: 1280px;
-  height: 1471px;
+  height: 1599px;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
