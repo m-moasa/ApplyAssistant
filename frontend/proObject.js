@@ -16,7 +16,7 @@ class proObject {
   static projectListPremium = [];
   static fieldFilter = [];
   static universityFilter = [];
-  premiumValue=false
+  static premiumValue = false;
   constructor(projectList, fieldFilter, universityFilter) {
     this.projectList = projectList;
     this.fieldFilter = fieldFilter;
@@ -92,22 +92,19 @@ class proObject {
 
     window.location.href = "index.html";
   }
-  premium(){
-    console.log("permium changed")
+  premium() {
+    console.log("permium changed");
     var EmergencyProject = document.getElementById("EmergencyProject").checked;
     var MoreResumes = document.getElementById("MoreResumes").checked;
-     console.log(MoreResumes,"  ",EmergencyProject)
+    console.log(MoreResumes, "  ", EmergencyProject);
 
-    if( EmergencyProject || MoreResumes){
-      this.premiumValue =true
-      console.log("hasReqPremium is true now")
-
-    }else{
-      this.premiumValue =false
-      console.log("hasReqPremium is false now")
-
+    if (EmergencyProject || MoreResumes) {
+      this.premiumValue = true;
+      console.log("hasReqPremium is true now");
+    } else {
+      this.premiumValue = false;
+      console.log("hasReqPremium is false now");
     }
-
   }
 
   back() {
@@ -149,7 +146,7 @@ class proObject {
     // TODO
     projectData.hasReqPremium = this.premiumValue;
 
-    console.log(projectData," position")
+    console.log(projectData, " position");
     this.sendDefineProjectToBack(projectData);
   }
 
@@ -159,10 +156,20 @@ class proObject {
     this.updateProject();
   }
 
+  partlyIncludes(list, obj) {
+    for (let i = 0; i < list.length; i++) {
+      const selectedField = list[i];
+      if (obj.includes(selectedField)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   appendList(someProjectList, isPremium) {
     someProjectList.forEach((project, index) => {
       if (
-        (this.fieldFilter.includes(project.fields) ||
+        (this.partlyIncludes(this.fieldFilter, project.fields) ||
           this.fieldFilter.length == 0) &&
         (this.universityFilter.includes(project.university) ||
           this.universityFilter.length == 0)

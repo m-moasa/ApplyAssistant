@@ -16,7 +16,7 @@ class proObject {
     static projectListPremium = [];
     static fieldFilter = [];
     static universityFilter = [];
-    premiumValue = false;
+    static premiumValue = false;
     constructor(projectList, fieldFilter, universityFilter){
         this.projectList = projectList;
         this.fieldFilter = fieldFilter;
@@ -123,9 +123,16 @@ class proObject {
         proObject.projectList1.push(project);
         this.updateProject();
     }
+    partlyIncludes(list, obj) {
+        for(let i = 0; i < list.length; i++){
+            const selectedField = list[i];
+            if (obj.includes(selectedField)) return true;
+        }
+        return false;
+    }
     appendList(someProjectList, isPremium) {
         someProjectList.forEach((project, index)=>{
-            if ((this.fieldFilter.includes(project.fields) || this.fieldFilter.length == 0) && (this.universityFilter.includes(project.university) || this.universityFilter.length == 0)) {
+            if ((this.partlyIncludes(this.fieldFilter, project.fields) || this.fieldFilter.length == 0) && (this.universityFilter.includes(project.university) || this.universityFilter.length == 0)) {
                 const section = document.createElement("SECTION");
                 if (!isPremium) section.classList.add("frame-section");
                 else section.classList.add("frame-section-premium");
