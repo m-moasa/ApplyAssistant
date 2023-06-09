@@ -37,6 +37,14 @@ const projectSchema = mongoose.Schema(
       type: String,
       required: [false],
     },
+    isPremium: {
+      type: Boolean,
+      required: [false],
+    },
+    hasReqPremium: {
+      type: Boolean,
+      required: [false],
+    },
   },
   {
     timestamp: true,

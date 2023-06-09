@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 5942
 85/home/ubuntu/term6/Tahlil/may19/resample/ApplyAssistant.github.io/frontend/global.css1684993467345725697 0
 100/home/ubuntu/term6/Tahlil/may19/resample/ApplyAssistant.github.io/frontend/project-addition-page.css1685016720929621426 0
@@ -5941,3 +5942,7 @@
 124/home/ubuntu/term6/Tahlil/may19/resample/ApplyAssistant.github.io/frontend/node_modules/@parcel/watcher/prebuilds/darwin-x641684994499909725575 1
 126/home/ubuntu/term6/Tahlil/may19/resample/ApplyAssistant.github.io/frontend/node_modules/@parcel/watcher/prebuilds/darwin-arm641684994499805725575 1
 123/home/ubuntu/term6/Tahlil/may19/resample/ApplyAssistant.github.io/frontend/node_modules/@parcel/watcher/prebuilds/win32-x641684994500021725575 1
+=======
+71732021
+1685516244977162000
+>>>>>>> 1269c44e412f57ab19855ae87392e4f39beb83fe

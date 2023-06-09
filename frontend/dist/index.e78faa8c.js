@@ -7,10 +7,13 @@ const position = {
     fields: "fields",
     detail: "detail",
     summary: "Summary",
-    requiredDocs: "RequireDocuments"
+    requiredDocs: "RequireDocuments",
+    isPremium: "isPremium",
+    hasReqPremium: "hasReqPremium"
 };
 class proObject {
     static projectList1 = [];
+    static projectListPremium = [];
     static fieldFilter = [];
     static universityFilter = [];
     constructor(projectList, fieldFilter, universityFilter){
@@ -24,7 +27,11 @@ class proObject {
         await fetch(this.url).then((res)=>res.json()).then((data)=>{
             projectsList = data;
         });
-        proObject.projectList1 = projectsList;
+        projectsList.forEach((project, index)=>{
+            if (project.isPremium) proObject.projectListPremium.push(project);
+            else proObject.projectList1.push(project);
+        });
+        // proObject.projectList1 = projectsList;
         this.updateProject();
     }
     updateUniFilter(uniName) {
@@ -65,7 +72,7 @@ class proObject {
         window.location.href = "index.html";
     }
     back() {
-        console.log("AAAqqqqqqqqqqq");
+        // console.log("AAAqqqqqqqqqqq");
         // this.updateProject();
         window.location.href = "index.html";
     }
@@ -90,6 +97,9 @@ class proObject {
         projectData.email = proffessorEmail;
         projectData.summary = proffessorSummary;
         projectData.requiredDocs = proffessorRequireDocuments;
+        projectData.isPremium = false;
+        // TODO
+        projectData.hasReqPremium = false;
         this.sendDefineProjectToBack(projectData);
     }
     addProject(project) {
@@ -97,12 +107,12 @@ class proObject {
         proObject.projectList1.push(project);
         this.updateProject();
     }
-    updateProject() {
-        while(this.projectList.firstChild)this.projectList.removeChild(this.projectList.firstChild);
-        proObject.projectList1.forEach((project, index)=>{
+    appendList(someProjectList, isPremium) {
+        someProjectList.forEach((project, index)=>{
             if ((this.fieldFilter.includes(project.fields) || this.fieldFilter.length == 0) && (this.universityFilter.includes(project.university) || this.universityFilter.length == 0)) {
                 const section = document.createElement("SECTION");
-                section.classList.add("frame-section");
+                if (!isPremium) section.classList.add("frame-section");
+                else section.classList.add("frame-section-premium");
                 const projectNameParent = document.createElement("DIV");
                 projectNameParent.classList.add("project-name-parent");
                 const projectName = document.createElement("B");
@@ -153,6 +163,12 @@ class proObject {
                 this.projectList.appendChild(section);
             }
         });
+    }
+    updateProject() {
+        while(this.projectList.firstChild)this.projectList.removeChild(this.projectList.firstChild);
+        this.appendList(proObject.projectListPremium, true);
+        this.appendList(proObject.projectList1, false);
+    // proObject.projectList1
     }
     connect(url) {
         var applyButton = document.getElementById("connectBTN");
