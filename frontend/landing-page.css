@@ -1,9 +1,15 @@
 .aa1 {
   position: relative;
   letter-spacing: -0.33em;
+  color: #000;
+}
+.container {
+  width: 65%;
+  margin: 0 auto;
 }
 .apply-assistant1 {
   position: relative;
+  color: #000;
   font-size: var(--font-size-21xl);
   text-align: center;
   -webkit-text-stroke: 0.3px #fff;
@@ -23,8 +29,14 @@
   position: relative;
   -webkit-text-stroke: 0.1px #fff;
 }
+.collaborator1 {
+  position: relative;
+  cursor: pointer;
+  -webkit-text-stroke: 0.1px #fff;
+}
 .where-your-find-your-next-parent {
   gap: 4px;
+  color: #000;
 }
 .frame-parent9,
 .frame-wrapper3,
@@ -44,11 +56,14 @@
 .join-a-project {
   position: relative;
   font-weight: 300;
+  cursor: pointer;
 }
 .join-a-project-wrapper {
+  
   border-radius: var(--br-5xs);
-  background-color: var(--color-whitesmoke-100);
-  border: 1px solid var(--color-black);
+  /* background-color: var(--color-whitesmoke-100); */
+  border:  2px solid #000697;
+  color: #000697;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -59,12 +74,15 @@
 .add-a-project {
   position: relative;
   font-weight: 300;
+  cursor: pointer;
   -webkit-text-stroke: 0.3px #fff;
 }
 .add-a-project-wrapper,
 .frame-parent10,
 .frame-parent8 {
   display: flex;
+ 
+
   align-items: flex-start;
   justify-content: flex-start;
 }
@@ -260,20 +278,34 @@
   background: linear-gradient(92.75deg, #6be2ff, #4aa8ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 25px;
+}
+.span2 {
+  background: linear-gradient(92.75deg, #6be2ff, #4aa8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .is-society-of-academic-project {
   font-weight: 200;
+  font-size: 25px;
+
 }
 .apply-assistant-is-society-of {
   margin: 0;
+}
+.apply-assistant-is-society-of1 {
+  margin: 0;
+  cursor: pointer;
 }
 .owners-and-students {
   letter-spacing: 0.08em;
 }
 .student,
 .you-can-find {
+  font-size: 25px;
   font-family: var(--font-inter);
 }
+
 .student {
   font-weight: 900;
   background: linear-gradient(92.05deg, #3776ff, #2898ff);
@@ -281,19 +313,15 @@
   -webkit-text-fill-color: transparent;
 }
 .you-can-find {
+  font-size: 25px;
   font-weight: 200;
   color: var(--color-white);
 }
 .project-owner {
   font-weight: 900;
   font-family: var(--font-inter);
-  background: linear-gradient(
-    90.95deg,
-    #ff640d,
-    #ff9338 38.54%,
-    #dc7800 76.56%,
-    #f90
-  );
+  background:  rgb(240, 232, 3);
+  font-size: 25px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -343,9 +371,10 @@
   color: var(--color-white);
 }
 .from {
-  font-weight: 100;
+  color: black;
 }
 .partners-from {
+  color: #000;
   position: relative;
   -webkit-text-stroke: 0.3px #fff;
 }
@@ -445,7 +474,9 @@
   color: var(--color-cornflowerblue);
 }
 .i-am-a-container {
+  color: #000;
   position: relative;
+  cursor: pointer;
 }
 .looking-for-a-container {
   position: relative;
@@ -602,6 +633,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--gap-5xs);
+  cursor: pointer;
 }
 .group-parent4 {
   position: relative;
@@ -895,7 +927,7 @@
 }
 .best-place-to-container1 {
   position: relative;
-  background: linear-gradient(88.21deg, #ff5c00, #df7900);
+  background: linear-gradient(88.21deg, #eeff00, #f7f30a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -1007,7 +1039,7 @@
   top: 26px;
   left: 8.24px;
   font-size: var(--font-size-3xs);
-  color: #f56400;
+  color: #f5dd00;
 }
 .div3 {
   left: 271px;
@@ -1039,7 +1071,7 @@
   top: 168px;
   left: 339.24px;
   font-size: var(--font-size-3xs);
-  color: #e37500;
+  color: #e3df00;
 }
 .group-child93 {
   position: absolute;
@@ -1106,14 +1138,31 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 430px;
+  gap: 130px;
+  font-size: 20px;
+}
+.is-aa-for-specific-country-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 130px;
+  font-size: 20px;
+}
+.how-much-does-it-cost-to-us-aa-parent .answer {
+  display: none;
+  font-size: 13px;
+}
+.is-aa-for-specific-country-parent .answer2 {
+  display: none;
+  font-size: 13px;
 }
 .frame-wrapper4 {
   position: absolute;
   top: 0;
   left: 0;
   border-radius: var(--br-3xs);
-  background: linear-gradient(90.06deg, #fff 82.93%, #f45412);
+  background: linear-gradient(90.06deg, #fff 82.93%, #edf100);
   box-shadow: 0 4px 20px 3px rgba(105, 105, 105, 0.25);
   overflow: hidden;
   display: flex;
@@ -1121,6 +1170,14 @@
   padding: var(--padding-mini) var(--padding-15xl);
   align-items: flex-start;
   justify-content: flex-start;
+}
+.frame-child111 {
+  position: absolute;
+  top: 1.16px;
+  left: -0.35px;
+  border-radius: var(--br-9xs);
+  width: 32.71px;
+  height: 32px;
 }
 .frame-child11 {
   position: absolute;
@@ -1130,7 +1187,7 @@
   width: 32.71px;
   height: 32px;
 }
-.vector-container {
+.vector-container1 {
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -1141,13 +1198,18 @@
   transform: rotate(90deg);
   transform-origin: 0 0;
 }
-.is-aa-for-specific-country-parent {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 500px;
+.vector-container2 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  width: 16px;
+  height: 32px;
+  transform: rotate(90deg);
+  transform-origin: 0 0;
 }
+
 .no-you-can {
   margin: 0;
   padding-left: 27px;
@@ -1269,10 +1331,10 @@
   height: 29.33px;
 }
 .frame-child13 {
-  top: -1.06px;
-  left: -2.12px;
-  width: 19.18px;
-  height: 34.12px;
+  top: 1.06px;
+  left: -10.12px;
+  width: 41.18px;
+  height: 54.12px;
 }
 .vector-frame {
   cursor: pointer;
@@ -1282,6 +1344,7 @@
   position: relative;
   width: 16px;
   height: 32px;
+  transform: rotate(270deg);
 }
 .aa-icon {
   position: relative;
@@ -1342,16 +1405,16 @@
 .landing-page-child3 {
   top: 2307px;
   left: 1168px;
-  background: linear-gradient(93.64deg, #f1942b, #e9881c 54.69%, #ff2828);
+  background: linear-gradient(93.64deg, #f1ee2b, #f1f510 54.69%, #fffb00);
 }
 .landing-page-child4 {
   top: 1089px;
   left: 1194px;
-  background: linear-gradient(93.64deg, #84050c, #fb9a44 54.69%, #ff8417);
+  background:  linear-gradient(93.64deg, #f1ee2b, #f1f510 54.69%, #fffb00);
 }
 .landing-page {
   position: relative;
-  background-color: var(--color-black);
+  /* background-color: var(--color-black); */
   width: 100%;
   height: 3180px;
   overflow: hidden;
@@ -1359,4 +1422,6 @@
   font-size: var(--font-size-13xl);
   color: var(--color-whitesmoke-100);
   font-family: var(--font-inter);
+  background-color: white;
+
 }

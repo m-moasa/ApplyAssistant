@@ -1,3 +1,5 @@
+<div class="container">
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,6 +21,18 @@
     />
   </head>
   <body>
+    <script src="proObject.js"></script>
+    <script type="text/javascript">
+      var encodedObject = window.location.search.split("=")[1];
+      var decodedObject = decodeURIComponent(encodedObject);
+      var parsedObject = JSON.parse(decodedObject);
+      var projectsObject = new proObject(
+        parsedObject.projectList,
+        parsedObject.fieldFilter,
+        parsedObject.universityFilter
+      );
+      window.projectsObject = projectsObject;
+    </script>
     <div class="landing-page">
       <div class="frame-parent6">
         <div class="frame-parent7">
@@ -38,10 +52,23 @@
             </div>
             <div class="frame-parent10">
               <div class="join-a-project-wrapper">
-                <div class="join-a-project">Join a Project</div>
+                <div class="join-a-project" onclick="JoinAProject()" >Join a Project</div>
+                <script>
+                    function JoinAProject(){
+                      window.location.href =
+                "./index.html#sctiveSection" ;
+                    }
+                      function  back() {
+                     window.location.href = "./index.html";
+                }
+                function AddAProject(){
+                      window.location.href =
+                "./project-addition-page.html" ;
+                    }
+                </script>
               </div>
               <div class="add-a-project-wrapper">
-                <div class="add-a-project">Add a Project</div>
+                <div class="add-a-project" onclick="AddAProject()">Add a Project</div>
               </div>
             </div>
           </div>
@@ -80,13 +107,13 @@
               </span>
               <span class="is-society-of-academic-project">
                 <span class="span"> </span>
-                <span>is Society of Academic Projects </span>
+                <span style="color: black;">is Society of Academic Projects </span>
               </span>
             </p>
             <p class="apply-assistant-is-society-of">
               <span class="is-society-of-academic-project">
                 <span>
-                  <span class="owners-and-students"
+                  <span class="owners-and-students" style="color: black;"
                     >Owners and Students Looking For Projects.</span
                   >
                 </span>
@@ -94,20 +121,20 @@
             </p>
             <p class="apply-assistant-is-society-of">
               <span class="is-society-of-academic-project">
-                <span>as a </span>
+                <span style="color: black;">as a </span>
               </span>
               <span class="student">Student</span>
-              <span class="you-can-find">
+              <span class="you-can-find" style="color: black;">
                 you can find Projects to Collaborate in.</span
               >
             </p>
             <p class="apply-assistant-is-society-of">
-              <span class="you-can-find">as a </span>
-              <span class="project-owner">Project owner</span>
-              <span class="you-can-find"> you can find Students to </span>
+              <span class="you-can-find" style="color: black;">as a </span>
+              <span class="project-owner" style="font-size: 25px;">Project owner</span>
+              <span class="you-can-find" style="color: black;"> you can find Students to </span>
             </p>
             <p class="apply-assistant-is-society-of">
-              <span class="you-can-find">Help you in Your Project in.</span>
+              <span class="you-can-find" style="color: black;">Help you in Your Project in.</span>
             </p>
           </div>
           <div class="rectangle-parent12">
@@ -205,7 +232,7 @@
             <div class="frame-parent12">
               <div class="i-am-a-student-parent">
                 <div class="i-am-a-container">
-                  <span>I Am a </span>
+                  <span style="color: aliceblue;">I Am a </span>
                   <i class="student1">Student</i>
                 </div>
                 <div class="looking-for-a-container">
@@ -218,7 +245,7 @@
                 </div>
               </div>
               <div class="see-some-projects-wrapper">
-                <div class="i-am-a-container">See some Projects</div>
+                <div class="i-am-a-container" onclick="JoinAProject()">See some Projects</div>
               </div>
             </div>
           </div>
@@ -234,7 +261,7 @@
             </div>
             <div class="i-am-a-project-owner-parent">
               <div class="i-am-a-container">
-                <span>I Am a </span>
+                <span  style="color: aliceblue;">I Am a </span>
                 <i class="project-owner1">Project Owner</i>
               </div>
               <div class="looking-for-a-container">
@@ -245,14 +272,14 @@
               </div>
             </div>
             <div class="define-a-project-container">
-              <div class="i-am-a-container">Define a Project</div>
+              <div class="i-am-a-container" onclick="AddAProject()">Define a Project</div>
             </div>
           </div>
         </div>
         <div class="fields-to-apply-for-parent">
           <div class="i-am-a-container">
             <b>
-              <span class="span">Fields</span>
+              <span class="span2">Fields</span>
               <span> </span>
             </b>
             <span>
@@ -278,10 +305,10 @@
                     src="./public/-d64c0552e20849268c14300edb9b45f0-1@2x.png"
                   />
                 </div>
-                <div class="artificial-intelligence-parent">
+                <div class="artificial-intelligence-parent"  onclick="window.projectsObject.selectFieldAI()">
                   <b class="artificial-intelligence">
-                    <p class="apply-assistant-is-society-of">Artificial</p>
-                    <p class="apply-assistant-is-society-of">intelligence</p>
+                    <p class="apply-assistant-is-society-of1">Artificial</p>
+                    <p class="apply-assistant-is-society-of1" >intelligence</p>
                   </b>
                   <div class="ai-ml-vision">AI, ML, Vision, NLP</div>
                 </div>
@@ -295,7 +322,7 @@
                     src="./public/-b6d72ae9bd784ba3bef6920ab92dbc4b-1@2x.png"
                   />
                 </div>
-                <div class="artificial-intelligence-parent">
+                <div class="artificial-intelligence-parent"  onclick="window.projectsObject.selectFieldSystems()">
                   <b class="systems">Systems</b>
                   <div class="ai-ml-vision">
                     <p class="apply-assistant-is-society-of">
@@ -318,7 +345,7 @@
                     src="./public/-6d59f396f7204833864f7b7837e075ec-1@2x.png"
                   />
                 </div>
-                <div class="artificial-intelligence-parent">
+                <div class="artificial-intelligence-parent"  onclick="window.projectsObject.selectFieldTheory()">
                   <b class="theory">Theory</b>
                   <div class="ai-ml-vision">
                     <p class="apply-assistant-is-society-of">Algorithms,</p>
@@ -337,7 +364,7 @@
                     src="./public/-ea559a6147c54f2482d4f91334816ee4@2x.png"
                   />
                 </div>
-                <div class="artificial-intelligence-parent">
+                <div class="artificial-intelligence-parent"   onclick="window.projectsObject.selectFieldInterdisciplinary()">
                   <b class="interdisciplinary">Interdisciplinary</b>
                   <div class="ai-ml-vision">
                     <p class="apply-assistant-is-society-of">bioinformatics,</p>
@@ -502,22 +529,56 @@
           <b class="stats">FAQ</b>
           <div class="frame-parent15">
             <div class="frame-wrapper4">
-              <div class="how-much-does-it-cost-to-us-aa-parent">
-                <b class="i-am-a-container">How Much Does it cost to us AA?</b>
-                <button class="vector-wrapper">
+              <div class="how-much-does-it-cost-to-us-aa-parent" onclick="toggleAnswer(this)">
+                <b class="i-am-a-container" id="cost">How Much Does it cost to us AA?</b>
+                <div class="answer">The cost is nothing!</div>
+
+                <button class="vector-container1"   >
                   <img
-                    class="frame-child10"
+                    class="frame-child111"
                     alt=""
-                    src="./public/vector-14.svg"
+                    src="./public/vector-141.svg"
                   />
                 </button>
               </div>
+
             </div>
+            <script>
+
+
+
+              function toggleAnswer(container) {
+                    var answer = container.querySelector('.answer');
+                    answer.style.display = (answer.style.display === 'none') ? 'block' : 'none';
+                   
+                    //////////
+                    let image = document.querySelector('.frame-child111');
+                    let currentRotation = image.dataset.rotation || 180;
+                    let newRotation = parseInt(currentRotation) + 180;
+                    image.style.transform = 'rotate(' + newRotation + 'deg)';
+                    image.dataset.rotation = newRotation;
+                }
+                function toggleAnswer2(container) {
+                    var answer = container.querySelector('.answer2');
+                    answer.style.display = (answer.style.display === 'none') ? 'block' : 'none';
+
+                        //////////
+                    let image = document.querySelector('.frame-child11');
+                    let currentRotation = image.dataset.rotation || 180;
+                    let newRotation = parseInt(currentRotation) + 180;
+                    image.style.transform = 'rotate(' + newRotation + 'deg)';
+                    image.dataset.rotation = newRotation;
+                }
+            </script>
+
+        
             <div class="frame-wrapper5">
               <div class="frame-parent16">
-                <div class="is-aa-for-specific-country-parent">
+                <div class="is-aa-for-specific-country-parent" onclick="toggleAnswer2(this)">
                   <b class="i-am-a-container">Is AA For specific country?</b>
-                  <button class="vector-container">
+                  <div class="answer2"> No You can Use AA From Anywhere on the world.</div>
+
+                  <button class="vector-container2">
                     <img
                       class="frame-child11"
                       alt=""
@@ -525,11 +586,7 @@
                     />
                   </button>
                 </div>
-                <div class="no-you-can-container">
-                  <ul class="no-you-can">
-                    No You can Use AA From Anywhere on the world.
-                  </ul>
-                </div>
+        
               </div>
             </div>
           </div>
@@ -553,14 +610,14 @@
 
       <div class="frame-parent17">
         <button class="vector-frame">
-          <img class="frame-child13" alt="" src="./public/vector-142.svg" />
+          <img class="frame-child13" alt="" src="./public/vector-141.svg"   onclick="back()" style="color: black;"/>
         </button>
         <div class="aa-group">
           <img class="aa-icon" alt="" src="./public/aa.svg" />
 
-          <div class="collaborator">Introduction</div>
-          <div class="collaborator">Join a Project</div>
-          <div class="collaborator">Define a Project</div>
+          <div class="collaborator"  style="color: black;">Introduction</div>
+          <div class="collaborator1" onclick="JoinAProject()" style="color: black;">Join a Project</div>
+          <div class="collaborator1"  onclick="AddAProject()"  style="color: black;">Define a Project</div>
         </div>
       </div>
       <div class="landing-page-inner"></div>
@@ -571,3 +628,4 @@
     </div>
   </body>
 </html>
+</div>

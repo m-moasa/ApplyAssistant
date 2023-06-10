@@ -419,6 +419,16 @@
   top: 267px;
 }
 
+.about {
+  cursor: pointer;
+  font-size: var(--font-size-5xl);
+  text-align: center;
+  -webkit-text-stroke: .1px #fff;
+  position: relative;
+  top: 280px;
+  right: 1%;
+}
+
 .where-your-find {
   margin: 0;
   font-family: inherit;

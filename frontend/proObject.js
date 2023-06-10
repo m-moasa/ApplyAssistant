@@ -16,7 +16,7 @@ class proObject {
   static projectListPremium = [];
   static fieldFilter = [];
   static universityFilter = [];
-  premiumValue=false
+  static premiumValue = false;
   constructor(projectList, fieldFilter, universityFilter) {
     this.projectList = projectList;
     this.fieldFilter = fieldFilter;
@@ -70,7 +70,41 @@ class proObject {
     }
     this.updateProject();
   }
+  selectFieldAI(){//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    window.location.href = "./index.html#sctiveSection";
+    document.getElementById("AI").checked = true;
+    this.fieldFilter.push("AI");
 
+    document.getElementById("ML").checked = true;
+    this.fieldFilter.push("ML");
+
+    this.updateProject();
+  }
+
+  selectFieldSystems(){//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    window.location.href = "./index.html#sctiveSection";
+    document.getElementById("Networks").checked = true;
+    this.fieldFilter.push("Networks");
+
+    this.updateProject();
+  }
+
+  selectFieldTheory(){//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    window.location.href = "./index.html#sctiveSection";
+    document.getElementById("Algorithms").checked = true;
+    this.fieldFilter.push("Algorithms");
+
+    this.updateProject();
+  }
+  selectFieldInterdisciplinary(){//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    window.location.href = "./index.html#sctiveSection";
+    document.getElementById("Bioinformatics").checked = true;
+    this.fieldFilter.push("Bioinformatics");
+
+    this.updateProject();
+  }
+
+  
   async sendDefineProjectToBack(position) {
     this.url = "http://localhost:5001/api/projects/";
     fetch(this.url, {
@@ -92,22 +126,19 @@ class proObject {
 
     window.location.href = "index.html";
   }
-  premium(){
-    console.log("permium changed")
+  premium() {
+    console.log("permium changed");
     var EmergencyProject = document.getElementById("EmergencyProject").checked;
     var MoreResumes = document.getElementById("MoreResumes").checked;
-     console.log(MoreResumes,"  ",EmergencyProject)
+    console.log(MoreResumes, "  ", EmergencyProject);
 
-    if( EmergencyProject || MoreResumes){
-      this.premiumValue =true
-      console.log("hasReqPremium is true now")
-
-    }else{
-      this.premiumValue =false
-      console.log("hasReqPremium is false now")
-
+    if (EmergencyProject || MoreResumes) {
+      this.premiumValue = true;
+      console.log("hasReqPremium is true now");
+    } else {
+      this.premiumValue = false;
+      console.log("hasReqPremium is false now");
     }
-
   }
 
   back() {
@@ -149,7 +180,7 @@ class proObject {
     // TODO
     projectData.hasReqPremium = this.premiumValue;
 
-    console.log(projectData," position")
+    console.log(projectData, " position");
     this.sendDefineProjectToBack(projectData);
   }
 
@@ -159,10 +190,20 @@ class proObject {
     this.updateProject();
   }
 
+  partlyIncludes(list, obj) {
+    for (let i = 0; i < list.length; i++) {
+      const selectedField = list[i];
+      if (obj.includes(selectedField)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   appendList(someProjectList, isPremium) {
     someProjectList.forEach((project, index) => {
       if (
-        (this.fieldFilter.includes(project.fields) ||
+        (this.partlyIncludes(this.fieldFilter, project.fields) ||
           this.fieldFilter.length == 0) &&
         (this.universityFilter.includes(project.university) ||
           this.universityFilter.length == 0)

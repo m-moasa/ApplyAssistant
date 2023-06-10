@@ -77,10 +77,16 @@ projectObject.createProjectList();
         <i class="academic-project">academic project</i>
         <h1 class="aa">AA</h1>
         <img class="search-result-page-item" alt="" src="/vector-13.3a4eb598.svg">
+        <h3 class="about" id="about_btn">Read more about AA</h3>
+        <script>document.getElementById("about_btn").addEventListener("click", function() {
+    var encodedProjectObject = encodeURIComponent(JSON.stringify(window.projectObject));
+    window.location.href = "./landing-page.html?data=" + encodedProjectObject;
+});
 
+</script>
         <img class="rectangle-icon" alt="" src="/rectangle-22@2x.f430dcdd.png">
 
-        <strong class="active-projects">Active Projects</strong>
+        <strong class="active-projects" id="sctiveSection">Active Projects</strong>
         <div class="line-div"></div>
         <img class="search-result-page-child1" alt="" src="/rectangle-22@2x.f430dcdd.png">
 

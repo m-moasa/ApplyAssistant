@@ -16,7 +16,7 @@ class proObject {
     static projectListPremium = [];
     static fieldFilter = [];
     static universityFilter = [];
-    premiumValue = false;
+    static premiumValue = false;
     constructor(projectList, fieldFilter, universityFilter){
         this.projectList = projectList;
         this.fieldFilter = fieldFilter;
@@ -53,6 +53,32 @@ class proObject {
             if (index > -1) // only splice array when item is found
             this.fieldFilter.splice(index, 1); // 2nd parameter means remove one item only
         }
+        this.updateProject();
+    }
+    selectFieldAI() {
+        window.location.href = "./index.html#sctiveSection";
+        document.getElementById("AI").checked = true;
+        this.fieldFilter.push("AI");
+        document.getElementById("ML").checked = true;
+        this.fieldFilter.push("ML");
+        this.updateProject();
+    }
+    selectFieldSystems() {
+        window.location.href = "./index.html#sctiveSection";
+        document.getElementById("Networks").checked = true;
+        this.fieldFilter.push("Networks");
+        this.updateProject();
+    }
+    selectFieldTheory() {
+        window.location.href = "./index.html#sctiveSection";
+        document.getElementById("Algorithms").checked = true;
+        this.fieldFilter.push("Algorithms");
+        this.updateProject();
+    }
+    selectFieldInterdisciplinary() {
+        window.location.href = "./index.html#sctiveSection";
+        document.getElementById("Bioinformatics").checked = true;
+        this.fieldFilter.push("Bioinformatics");
         this.updateProject();
     }
     async sendDefineProjectToBack(position) {
@@ -123,9 +149,16 @@ class proObject {
         proObject.projectList1.push(project);
         this.updateProject();
     }
+    partlyIncludes(list, obj) {
+        for(let i = 0; i < list.length; i++){
+            const selectedField = list[i];
+            if (obj.includes(selectedField)) return true;
+        }
+        return false;
+    }
     appendList(someProjectList, isPremium) {
         someProjectList.forEach((project, index)=>{
-            if ((this.fieldFilter.includes(project.fields) || this.fieldFilter.length == 0) && (this.universityFilter.includes(project.university) || this.universityFilter.length == 0)) {
+            if ((this.partlyIncludes(this.fieldFilter, project.fields) || this.fieldFilter.length == 0) && (this.universityFilter.includes(project.university) || this.universityFilter.length == 0)) {
                 const section = document.createElement("SECTION");
                 if (!isPremium) section.classList.add("frame-section");
                 else section.classList.add("frame-section-premium");
