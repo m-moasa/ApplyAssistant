@@ -43,6 +43,9 @@ window.projectsObject = projectsObject;
                 <script>function JoinAProject() {
     window.location.href = "./index.html#sctiveSection";
 }
+function intro() {
+    window.location.href = "./landing-page.html#section2";
+}
 function back() {
     window.location.href = "./index.html";
 }
@@ -84,7 +87,7 @@ function AddAProject() {
           <div class="apply-assistant-is-container">
             <p class="apply-assistant-is-society-of">
               <span class="span">
-                <span class="apply-assistant3">Apply Assistant</span>
+                <span class="apply-assistant3" id="section2">Apply Assistant</span>
               </span>
               <span class="is-society-of-academic-project">
                 <span class="span"> </span>
@@ -475,7 +478,7 @@ function toggleAnswer2(container) {
         <div class="aa-group">
           <img class="aa-icon" alt="" src="/aa.d3fc8c6b.svg">
 
-          <div class="collaborator" style="color: #000">Introduction</div>
+          <div class="collaborator" onclick="intro()" style="color: #000">Introduction</div>
           <div class="collaborator1" onclick="JoinAProject()" style="color: #000">Join a Project</div>
           <div class="collaborator1" onclick="AddAProject()" style="color: #000">Define a Project</div>
         </div>

@@ -58,6 +58,10 @@
                       window.location.href =
                 "./index.html#sctiveSection" ;
                     }
+                    function intro(){
+                      window.location.href =
+                "./landing-page.html#section2" ;
+                    }
                       function  back() {
                      window.location.href = "./index.html";
                 }
@@ -103,7 +107,7 @@
           <div class="apply-assistant-is-container">
             <p class="apply-assistant-is-society-of">
               <span class="span">
-                <span class="apply-assistant3">Apply Assistant</span>
+                <span class="apply-assistant3" id="section2">Apply Assistant</span>
               </span>
               <span class="is-society-of-academic-project">
                 <span class="span"> </span>
@@ -615,7 +619,7 @@
         <div class="aa-group">
           <img class="aa-icon" alt="" src="./public/aa.svg" />
 
-          <div class="collaborator"  style="color: black;">Introduction</div>
+          <div class="collaborator" onclick="intro()" style="color: black;">Introduction</div>
           <div class="collaborator1" onclick="JoinAProject()" style="color: black;">Join a Project</div>
           <div class="collaborator1"  onclick="AddAProject()"  style="color: black;">Define a Project</div>
         </div>
