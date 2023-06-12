@@ -12,9 +12,9 @@
       />
     </head>
 
-    <body>
-      <script src="proObject.js"></script>
-
+    <!-- <body> -->
+    <script src="proObject.js"></script>
+    <body onload="window.projectObject.checkTheBoxes()">
       <div class="search-result-page">
         <img
           class="search-result-page-child"
@@ -81,6 +81,7 @@
           );
           window.projectObject = projectObject;
           projectObject.createProjectList();
+          // window.projectObject.checkTheBoxes();
         </script>
 
         <h2 class="apply-assistant">Apply Assistant</h2>
@@ -92,13 +93,12 @@
           alt=""
           src="./public/vector-13.svg"
         />
-        <h3 class="about" id ="about_btn">Read more about AA</h3>
+        <h3 class="about" id="about_btn">Read more about AA</h3>
         <script>
-    
           document
             .getElementById("about_btn")
             .addEventListener("click", function () {
-               var encodedProjectObject = encodeURIComponent(
+              var encodedProjectObject = encodeURIComponent(
                 JSON.stringify(window.projectObject)
               );
               window.location.href =
@@ -107,7 +107,12 @@
         </script>
         <img class="rectangle-icon" alt="" src="./public/rectangle-22@2x.png" />
 
-        <strong class="active-projects" id="sctiveSection">Active Projects</strong>
+        <strong
+          class="active-projects"
+          id="sctiveSection"
+          onload="window.projectObject.checkTheBoxes()"
+          >Active Projects</strong
+        >
         <div class="line-div"></div>
         <img
           class="search-result-page-child1"

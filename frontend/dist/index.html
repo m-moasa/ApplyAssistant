@@ -9,9 +9,9 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Times New Roman:ital,wght@0,400;0,700;1,400&display=swap">
     </head>
 
-    <body>
-      <script src="/index.e78faa8c.js"></script>
-
+    <!-- <body> -->
+    <script src="/index.e78faa8c.js"></script>
+    <body onload="window.projectObject.checkTheBoxes()">
       <div class="search-result-page">
         <img class="search-result-page-child" alt="" src="/group-6@2x.aa7f6b4a.png">
 
@@ -68,7 +68,7 @@ const fieldFilter = [];
 const projectList = document.getElementById("prolist");
 const projectObject = new proObject(projectList, fieldFilter, universityFilter);
 window.projectObject = projectObject;
-projectObject.createProjectList();
+projectObject.createProjectList(); // window.projectObject.checkTheBoxes();
 
 </script>
 
@@ -86,7 +86,7 @@ projectObject.createProjectList();
 </script>
         <img class="rectangle-icon" alt="" src="/rectangle-22@2x.f430dcdd.png">
 
-        <strong class="active-projects" id="sctiveSection">Active Projects</strong>
+        <strong class="active-projects" id="sctiveSection" onload="window.projectObject.checkTheBoxes()">Active Projects</strong>
         <div class="line-div"></div>
         <img class="search-result-page-child1" alt="" src="/rectangle-22@2x.f430dcdd.png">
 

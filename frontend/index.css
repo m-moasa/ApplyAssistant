@@ -5,10 +5,7 @@
   width: 244px;
   height: 242px;
   object-fit: cover;
-/*  */
-
-
-
+  /*  */
 }
 
 .group-child,
@@ -505,10 +502,10 @@
   -webkit-text-stroke: 0.1px #fff;
 }
 
-.about{
-  position: relative;
+.about {
+  position: absolute;
   top: 280px;
-  right: 1%;
+  left: 530px;
   cursor: pointer;
   font-size: var(--font-size-5xl);
   text-align: center;

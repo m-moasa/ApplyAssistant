@@ -424,9 +424,9 @@
   font-size: var(--font-size-5xl);
   text-align: center;
   -webkit-text-stroke: .1px #fff;
-  position: relative;
+  position: absolute;
   top: 280px;
-  right: 1%;
+  left: 530px;
 }
 
 .where-your-find {

@@ -11,12 +11,29 @@ const position = {
     isPremium: "isPremium",
     hasReqPremium: "hasReqPremium"
 };
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for(var i = 0; i < vars.length; i++){
+        var pair = vars[i].split("=");
+        if (decodeURIComponent(pair[0]) == variable) return decodeURIComponent(pair[1]);
+    }
+    console.log("Query variable %s not found", variable);
+}
 class proObject {
     static projectList1 = [];
     static projectListPremium = [];
     static fieldFilter = [];
     static universityFilter = [];
     static premiumValue = false;
+    static allFields = [
+        "AI",
+        "ML",
+        "Software Engineering",
+        "Networks",
+        "Algorithms",
+        "Bioinformatics"
+    ];
     constructor(projectList, fieldFilter, universityFilter){
         this.projectList = projectList;
         this.fieldFilter = fieldFilter;
@@ -46,6 +63,7 @@ class proObject {
         this.updateProject();
     }
     updateFieldFilter(fieldName) {
+        console.log("ah", this.fieldFilter);
         var checkbox = document.getElementById(fieldName);
         if (checkbox.checked) this.fieldFilter.push(fieldName);
         else {
@@ -54,32 +72,69 @@ class proObject {
             this.fieldFilter.splice(index, 1); // 2nd parameter means remove one item only
         }
         this.updateProject();
+        console.log("bah", this.fieldFilter);
+    }
+    checkTheBoxes() {
+        console.log(this.fieldFilter);
+        this.fieldFilter = getQueryVariable("fieldsChecked");
+        if (this.fieldFilter == undefined) {
+            this.fieldFilter = [];
+            return;
+        }
+        if (typeof this.fieldFilter == "string") this.fieldFilter = JSON.parse(this.fieldFilter);
+        proObject.allFields.forEach((element, _index)=>{
+            // console.log(this.fieldFilter, element);
+            if (this.fieldFilter.includes(element)) {
+                console.log(element);
+                document.getElementById(element).checked = true;
+            }
+        });
     }
     selectFieldAI() {
-        window.location.href = "./index.html#sctiveSection";
-        document.getElementById("AI").checked = true;
-        this.fieldFilter.push("AI");
-        document.getElementById("ML").checked = true;
-        this.fieldFilter.push("ML");
-        this.updateProject();
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // window.location.replace("./index.html");
+        // sessionStorage.setItem("reloading", "true");
+        // window.location = 'production/produc_order.php';
+        window.location.href = './index.html?fieldsChecked=["AI","ML"]#sctiveSection';
+    // var reloading = sessionStorage.getItem("reloading");
+    // if (reloading == true) {
+    //   sessionStorage.removeItem("reloading");
+    //   console.log(document.body);
+    //   console.log(document.getElementById("AI"));
+    //   // document.getElementById("AI").checked = true;
+    //   this.fieldFilter.push("AI");
+    //   // document.getElementById("ML").checked = true;
+    //   this.fieldFilter.push("ML");
+    //   this.fieldFilter = ["AI", "ML"];
+    //   console.log(this.fieldFilter);
+    //   this.updateProject();
+    // } // document.location.href = "./index.html";
+    // document.location.href = newUrl;
+    // document = window;
     }
     selectFieldSystems() {
-        window.location.href = "./index.html#sctiveSection";
-        document.getElementById("Networks").checked = true;
-        this.fieldFilter.push("Networks");
-        this.updateProject();
+        window.location.href = './index.html?fieldsChecked=["Networks"]#sctiveSection';
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // window.location.href = "./index.html#sctiveSection";
+    // document.getElementById("Networks").checked = true;
+    // this.fieldFilter.push("Networks");
+    // this.updateProject();
     }
     selectFieldTheory() {
-        window.location.href = "./index.html#sctiveSection";
-        document.getElementById("Algorithms").checked = true;
-        this.fieldFilter.push("Algorithms");
-        this.updateProject();
+        window.location.href = './index.html?fieldsChecked=["Algorithms"]#sctiveSection';
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // window.location.href = "./index.html#sctiveSection";
+    // document.getElementById("Algorithms").checked = true;
+    // this.fieldFilter.push("Algorithms");
+    // this.updateProject();
     }
     selectFieldInterdisciplinary() {
-        window.location.href = "./index.html#sctiveSection";
-        document.getElementById("Bioinformatics").checked = true;
-        this.fieldFilter.push("Bioinformatics");
-        this.updateProject();
+        window.location.href = './index.html?fieldsChecked=["Bioinformatics"]#sctiveSection';
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // window.location.href = "./index.html#sctiveSection";
+    // document.getElementById("Bioinformatics").checked = true;
+    // this.fieldFilter.push("Bioinformatics");
+    // this.updateProject();
     }
     async sendDefineProjectToBack(position) {
         this.url = "http://localhost:5001/api/projects/";
@@ -92,25 +147,20 @@ class proObject {
             body: JSON.stringify(position)
         });
         // send the  define project to back
-        console.log(position.hasReqPremium, " hasReqPremium");
-        console.log(position, " new_position");
+        // console.log(position.hasReqPremium, " hasReqPremium");
+        // console.log(position, " new_position");
         // TODO : should uncomment these 2 lines after getting response from the back to update the positions
         // proObject.projectList1 = projectsList;
         // this.updateProject();
         window.location.href = "index.html";
     }
     premium() {
-        console.log("permium changed");
+        // console.log("permium changed");
         var EmergencyProject = document.getElementById("EmergencyProject").checked;
         var MoreResumes = document.getElementById("MoreResumes").checked;
         console.log(MoreResumes, "  ", EmergencyProject);
-        if (EmergencyProject || MoreResumes) {
-            this.premiumValue = true;
-            console.log("hasReqPremium is true now");
-        } else {
-            this.premiumValue = false;
-            console.log("hasReqPremium is false now");
-        }
+        if (EmergencyProject || MoreResumes) this.premiumValue = true;
+        else this.premiumValue = false;
     }
     back() {
         // console.log("AAAqqqqqqqqqqq");
@@ -118,7 +168,7 @@ class proObject {
         window.location.href = "index.html";
     }
     submitProject() {
-        console.log("submitProject");
+        // console.log("submitProject");
         var projectTitle = document.getElementById("projectTitle").value;
         var proffessorFullname = document.getElementById("proffessorFullname").value;
         var proffessorField = document.getElementById("proffessorField").value;
@@ -141,18 +191,23 @@ class proObject {
         projectData.isPremium = false;
         // TODO
         projectData.hasReqPremium = this.premiumValue;
-        console.log(projectData, " position");
+        // console.log(projectData, " position");
         this.sendDefineProjectToBack(projectData);
     }
     addProject(project) {
-        console.log(project);
+        // console.log(project);
         proObject.projectList1.push(project);
         this.updateProject();
     }
     partlyIncludes(list, obj) {
-        for(let i = 0; i < list.length; i++){
-            const selectedField = list[i];
-            if (obj.includes(selectedField)) return true;
+        if (list == undefined) return false;
+        // console.log(list);
+        const newList = list.length == 0 ? [] : list;
+        // const newList = [];
+        for(let i = 0; i < newList.length; i++){
+            const selectedField = newList[i];
+            if (obj.includes(selectedField)) // console.log(typeof JSON.parse(list), selectedField, obj);
+            return true;
         }
         return false;
     }
