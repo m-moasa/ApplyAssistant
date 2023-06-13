@@ -44,7 +44,7 @@ class proObject {
 
   async createProjectList() {
     var projectsList;
-    this.url = "http://localhost:5001/api/projects/";
+    this.url = "http://backend:5001/api/projects/";
     await fetch(this.url)
       .then((res) => res.json())
       .then((data) => {
@@ -172,7 +172,7 @@ class proObject {
   }
 
   async sendDefineProjectToBack(position) {
-    this.url = "http://localhost:5001/api/projects/";
+    this.url = "http://backend:5001/api/projects/";
     fetch(this.url, {
       method: "POST",
       headers: {
