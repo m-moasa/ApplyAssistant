@@ -38,6 +38,9 @@ FROM node:alpine
 RUN mkdir /app
 WORKDIR /app
 COPY package.json /app
+RUN apk add --update python3 make g++\
+   && rm -rf /var/cache/apk/*
+RUN rm -fr node_modules
 RUN npm install
 # --fetch-timeout=600000
 COPY . /app
